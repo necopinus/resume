@@ -1,3 +1,6 @@
+# Resumer CLI local "serve" directory
+public/
+
 # Logs
 logs
 *.log
