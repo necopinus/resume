@@ -21,8 +21,8 @@
       },
       {
         "network": "Twitter",
-        "username": "nathan_acks",
-        "url": "https://twitter.com/nathan_acks"
+        "username": "necopinus",
+        "url": "https://twitter.com/necopinus"
       }
     ]
   },
@@ -605,7 +605,7 @@
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2022-01-29T18:17:00",
+    "lastModified": "2022-01-30T09:29:00",
     "theme": "kendall"
   }
 }
