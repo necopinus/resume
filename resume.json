@@ -516,6 +516,11 @@
       "title": "Complete Beginner Learning Path",
       "date": "2021-11-08",
       "awarder": "TryHackMe"
+    },
+    {
+      "title": "Web Fundamentals Learning Path",
+      "date": "2022-01-30",
+      "awarder": "TryHackMe"
     }
   ],
   "skills": [
@@ -605,7 +610,7 @@
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2022-01-30T09:29:00",
+    "lastModified": "2022-01-30T21:57:00",
     "theme": "kendall"
   }
 }
