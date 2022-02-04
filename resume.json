@@ -180,19 +180,6 @@
       ]
     },
     {
-      "name": "University of Colorado, Denver",
-      "location": "Denver, CO",
-      "description": "Department of Applied Mathematics",
-      "position": "Graduate Teaching Assistant",
-      "url": "https://ucdenver.edu",
-      "startDate": "2006-01-01",
-      "endDate": "2006-05-31",
-      "highlights": [
-        "Taught Calculus I recitation including the topics of limits, series, parametric equations, differentiation, simple differential equations, and Riemann integration",
-        "Emphasized technology-assisted learning with a particular focus on the use of the TI-83, TI-84, and TI-89 calculators, the Derive 5 software package, and McGraw-Hill's MathZone skills assessment environment."
-      ]
-    },
-    {
       "name": "Budget Car & Truck Rental",
       "location": "Denver, CO",
       "description": "National Car and Truck Rental Company",
@@ -203,6 +190,19 @@
       "highlights": [
         "Translated a non-linear optimization problem into GAMS code and generated a series of simplified network flow problems from the results",
         "Verified model correctness by comparing logic and test results with those of an older model written in Fortran 95 using the NETSIDE solver"
+      ]
+    },
+    {
+      "name": "University of Colorado, Denver",
+      "location": "Denver, CO",
+      "description": "Department of Applied Mathematics",
+      "position": "Graduate Teaching Assistant",
+      "url": "https://ucdenver.edu",
+      "startDate": "2006-01-01",
+      "endDate": "2006-05-31",
+      "highlights": [
+        "Taught Calculus I recitation including the topics of limits, series, parametric equations, differentiation, simple differential equations, and Riemann integration",
+        "Emphasized technology-assisted learning with a particular focus on the use of the TI-83, TI-84, and TI-89 calculators, the Derive 5 software package, and McGraw-Hill's MathZone skills assessment environment."
       ]
     },
     {
@@ -508,8 +508,8 @@
   ],
   "awards": [
     {
-      "title": "Pre Security Learning Path",
-      "date": "2021-09-19",
+      "title": "Web Fundamentals Learning Path",
+      "date": "2022-01-30",
       "awarder": "TryHackMe"
     },
     {
@@ -518,8 +518,8 @@
       "awarder": "TryHackMe"
     },
     {
-      "title": "Web Fundamentals Learning Path",
-      "date": "2022-01-30",
+      "title": "Pre Security Learning Path",
+      "date": "2021-09-19",
       "awarder": "TryHackMe"
     }
   ],
@@ -600,9 +600,9 @@
     {
       "name": "Photography",
       "keywords": [
-        "Landscape Photography",
         "Urban Photography",
         "Macrophotography",
+        "Landscape Photography",
         "Adobe Lightroom"
       ]
     }
