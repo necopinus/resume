@@ -39,10 +39,10 @@
       "position": "Director of IT",
       "url": "https://publicinterestnetwork.org",
       "startDate": "2016-06-27",
-      "summary": "Founded and oversee the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrite and maintain IT and security-related documentation and trainings.\n\nHold bottom-line responsibility for the rollout, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServe as the technical point-of-contact for IT-related PCI DSS issues, investigate and remediate potential IT security incidents, and write and maintain IT and security-related documentation and trainings.",
+      "summary": "Founded and oversee the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrite and maintain IT and security-related documentation and trainings.\n\nHold bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServe as the technical point-of-contact for IT-related PCI DSS issues, investigate and remediate potential IT security incidents, and maintain IT and security-related documentation and trainings.",
       "highlights": [
         "Developed and implemented a security tier system for offices and staff to rationalize existing IT and physical security policies.",
-        "Created an internal system for the provisioning and management of the full lifecycle for accounts in services management by the IT & Security team.",
+        "Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT & Security team.",
         "Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.",
         "Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.",
         "Upgraded and managed office networks nationwide."
@@ -477,8 +477,8 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2022-02-06T19:54:00",
+    "version": "v2.0.0",
+    "lastModified": "2022-02-07T07:34:00",
     "theme": "jacrys"
   }
 }
