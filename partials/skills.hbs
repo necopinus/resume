@@ -1,0 +1,20 @@
+{{#if resume.skills.length}}
+	<section id="skills">
+		<header>
+			<h2>Technical Proficiency</h2>
+		</header>
+
+		<dl>
+			{{#each resume.skills}}
+				<dt>{{name}}</dt>
+				<dd>
+					{{#if keywords.length}}
+						{{#each keywords}}
+							{{.}}{{#unless @last}}, {{/unless}}
+						{{/each}}
+					{{/if}}
+				</dd>
+			{{/each}}
+		</dl>
+	</section>
+{{/if}}

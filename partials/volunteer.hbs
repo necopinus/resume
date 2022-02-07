@@ -1,0 +1,23 @@
+{{#if resume.volunteer.length}}
+	<section id="volunteer">
+		<header>
+			<h2>Community Involvement</h2>
+		</header>
+
+		<ul>
+			{{#each resume.volunteer}}
+				{{#if include}}
+					<li>
+						{{#if position}}{{position}} &mdash; {{/if}}
+						{{#if url}}<a href="{{{url}}}">{{/if}}{{organization}}{{#if url}}</a>{{/if}}
+						{{#if singleDate}}
+							<span class="period">(<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>)</span>
+						{{else}}
+							<span class="period">(<time datetime="{{onlyYear startDate}}">{{onlyYear startDate}}</time> &ndash; {{#if endDate}}<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>{{else}}Present{{/if}})</span>
+						{{/if}}
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</section>
+{{/if}}

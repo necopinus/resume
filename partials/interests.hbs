@@ -1,0 +1,20 @@
+{{#if resume.interests.length}}
+	<section id="interests">
+		<header>
+			<h2>Interests</h2>
+		</header>
+
+		<dl>
+			{{#each resume.interests}}
+				<dt>{{name}}</dt>
+				<dd>
+					{{#if keywords.length}}
+						{{#each keywords}}
+							{{.}}{{#unless @last}}, {{/unless}}
+						{{/each}}
+					{{/if}}
+				</dd>
+			{{/each}}
+		</dl>
+	</section>
+{{/if}}

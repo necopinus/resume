@@ -2,13 +2,13 @@
 
 To build:
 
-1. Generate HTML using `./node_modules/.bin/resume export resume.html --theme full`.
+1. Generate HTML using `./node_modules/.bin/resume export resume.html --theme .`.
 
-2. Open the HTML file up in Chrome and print it there. Adjust the margins to be as close to 1" as possible while maintaining sane page breaks.
+2. Open the HTML file up in Chrome and print it there. Adjust the margins to be as close to 1.25" as possible while maintaining sane page breaks.
 
-## Missing Sections
+## Unused Sections
 
-Eventually I hope to be able to fill in a few missing sections (examples below taken from the [JSON Resume sample file](https://github.com/jsonresume/resume-schema/blob/master/sample.resume.json)).
+Currently unused sections (example data taken from the [JSON Resume sample file](https://github.com/jsonresume/resume-schema/blob/master/sample.resume.json)):
 
 ```json
 {
@@ -19,6 +19,21 @@ Eventually I hope to be able to fill in a few missing sections (examples below t
       "releaseDate": "2014-10-01",
       "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
       "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
     }
   ],
   "references": [

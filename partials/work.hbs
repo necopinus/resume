@@ -1,0 +1,69 @@
+{{#if resume.workExists}}
+	<section id="work">
+		<header><h2>Professional Experience</h2></header>
+
+		{{#if resume.workRecent.length}}
+			<section id="recent">
+				{{#each resume.workRecent}}
+					<section class="organization">
+						<header>
+							<h3>{{#if url}}<a href="{{{url}}}">{{/if}}{{name}}{{#if url}}</a>{{/if}}{{#if location}}, <span class="location">{{location}}</span>{{/if}}</h3>
+							<div class="period">
+								{{#if singleDate}}
+									<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>
+								{{else}}
+									<time datetime="{{onlyYear startDate}}">{{onlyYear startDate}}</time> &ndash; {{#if endDate}}<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>{{else}}Present{{/if}}
+								{{/if}}
+							</div>
+						</header>
+
+						{{#each positions}}
+							<section class="position">
+								<header>
+									<h4>
+										{{position}}
+										{{#if singleDate}}
+											<span class="period">(<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>)</span>
+										{{else}}
+											<span class="period">(<time datetime="{{onlyYear startDate}}">{{onlyYear startDate}}</time> &ndash; {{#if endDate}}<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>{{else}}Present{{/if}})</span>
+										{{/if}}
+									</h4>
+								</header>
+
+								<ul>
+									{{itemSplit summary}}
+
+									{{#if highlights.length}}
+										<li>
+											Notable achievements while in the position have included:
+
+											<ul>
+												{{#each highlights}}
+													<li>{{.}}</li>
+												{{/each}}
+											</ul>
+										</li>
+									{{/if}}
+								</ul>
+							</section>
+						{{/each}}
+					</section>
+				{{/each}}
+			</section>
+		{{/if}}
+
+		{{#if resume.workPrevious.length}}
+			<section id="previous">
+				<dl>
+					<dt>Previous Employment</dt>
+					<dd>
+						{{#each resume.workPrevious}}
+							{{#each positions}}{{position}}{{#unless @last}}/{{/unless}}{{/each}}
+							&mdash; {{#if url}}<a href="{{{url}}}">{{/if}}{{name}}{{#if url}}</a>{{/if}}{{#if @last}}.{{else}}, {{/if}}
+						{{/each}}
+					</dd>
+				</dl>
+			</section>
+		{{/if}}
+	</section>
+{{/if}}

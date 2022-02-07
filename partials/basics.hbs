@@ -1,0 +1,49 @@
+{{#resume.basics}}
+	<section id="basics">
+		<header id="contact">
+			<h1>{{name}}</h1>
+			<address>
+				<div id="location">
+					{{location.city}},&nbsp;{{location.region}}
+				</div>
+				<div id="phone">
+					<a href="tel:{{{phone}}}">{{phone}}</a>
+				</div>
+				<div id="email">
+					<a href="mailto:{{{email}}}">{{email}}</a>
+				</div>
+				<div id="website">
+					<a href="{{{url}}}">{{url}}</a>
+				</div>
+			</address>
+		</header>
+		<section id="about">
+			<header>
+				{{#if label}}<h2>{{label}}</h2>{{/if}}
+				{{#if topline.length}}
+					<div id="topline">
+						{{#each topline}}
+							<div class="skill">{{.}}</div>
+						{{/each}}
+					</div>
+				{{/if}}
+			</header>
+
+			{{paragraphSplit summary}}
+
+			{{#if expertise.length}}
+				<section id="expertise">
+					<header>
+						<h3>Areas of Expertise</h3>
+					</header>
+
+					<ul>
+						{{#each expertise}}
+							<li>{{.}}</li>
+						{{/each}}
+					</ul>
+				</section>
+			{{/if}}
+		</section>
+	</section>
+{{/resume.basics}}

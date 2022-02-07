@@ -1,0 +1,27 @@
+body {
+	padding: 0;
+	color: black;
+	background-color: white;
+}
+
+#resume {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+header {
+	break-after: avoid;
+	break-inside: avoid;
+}
+
+header ~ section:first-child {
+	break-before: avoid;
+}
+
+#about,
+.position,
+#previous,
+#references blockquote {
+	break-inside: avoid;
+}

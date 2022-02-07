@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>{{#resume.basics}}{{name}}{{#if label}} &mdash; {{label}}{{/if}}{{/resume.basics}}</title>
+
+		<style>
+			{{{normalize}}}
+		</style>
+		<style>
+			{{{css}}}
+		</style>
+		<style media="print">
+			{{printcss}}
+		</style>
+	</head>
+
+	<body>
+		<article id="resume">
+			{{> basics }}
+			{{> skills }}
+			{{> languages }}
+			{{> awards }}
+			{{> work }}
+			{{> education }}
+			{{> publications }}
+			{{> projects }}
+			{{> volunteer }}
+			{{> interests }}
+			{{> references }}
+		</article>
+	</body>
+</html>

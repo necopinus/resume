@@ -1,0 +1,24 @@
+{{#if resume.education.length}}
+	<section id="education">
+		<header>
+			<h2>Education</h2>
+		</header>
+
+		<ul>
+			{{#each resume.education}}
+				{{#if include}}
+					<li>
+						{{#if studyType}}
+							<span class="studies">{{studyType}}{{#if area}}, {{area}}{{/if}}</span> &mdash;
+						{{else}}
+							{{#if area}}
+								<span class="studies">{{area}}</span> &mdash;
+							{{/if}}
+						{{/if}}
+						{{#if url}}<a href="{{{url}}}">{{/if}}{{institution}}{{#if url}}</a>{{/if}}
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</section>
+{{/if}}

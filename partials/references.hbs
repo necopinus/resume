@@ -1,0 +1,14 @@
+{{#if resume.references.length}}
+	<section id="references">
+		<header>
+			<h2>References &amp; Endorsements</h2>
+		</header>
+
+		{{#each resume.references}}
+			<blockquote>
+				{{paragraphSplit reference}}
+				<p class="source">&mdash; {{name}}</p>
+			</blockquote>
+		{{/each}}
+	</section>
+{{/if}}

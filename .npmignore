@@ -1,3 +1,9 @@
+# Ignore resume files
+resume.html
+resume.json
+resume.gist.json
+resume.pdf
+
 # Various application/OS graffiti
 .DS_Store
 .*.swp

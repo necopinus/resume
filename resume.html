@@ -1,1067 +1,879 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	<title>Nathan Acks  - IT Director → Penetration Tester / Ethical Hacker</title>
-	<style>
-  	:root {
-  --accent:#BC1B39;
-  --anchor-color: #2C85B1;
-  --blue:#2C85B1;
-  --copy-color-light: #666666;
-  --copy-color: #242424;
-  --grey:#999999;
-  --light-grey:#ededed;
-  --white:#FFFFFF;
-  --base-font-size: 12pt;
-  --spacing-double: 1rem;
-  --spacing-small: .1rem;
-  --spacing: .5rem;
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Nathan Acks &mdash; Cybersecurity Red Team</title>
+
+		<style>
+			/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
-@media (min-width: 567px) {
-  :root {
-    --spacing-double: 1.5rem;
-    --spacing-small: .25rem;
-    --spacing: .75rem;
-  }
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
 }
-@media print {
-  :root {
-    --anchor-color: #000000;
-    --base-font-size: 9pt;
-    --copy-color-light: #000000;
-    --copy-color: #000000;
-  }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+		</style>
+		<style>
+			@media (prefers-color-scheme: light) {
+	/* https://github.com/chriskempson/tomorrow-theme#tomorrow */
+
+	:root {
+		--background: #ffffff;
+		--foreground: #4d4d4c;
+		--red: #c82829;
+		--orange: #f5871f;
+		--yellow: #eab700;
+		--green: #718c00;
+		--aqua: #3e999f;
+		--blue: #4271ae;
+		--purple: #8959a8;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	/* https://github.com/chriskempson/tomorrow-theme#tomorrow-night */
+
+	:root {
+		--background: #1d1f21;
+		--foreground: #c5c8c6;
+		--red: #cc6666;
+		--orange: #de935f;
+		--yellow: #f0c674;
+		--green: #b5bd68;
+		--aqua: #8abeb7;
+		--blue: #81a2be;
+		--purple: #b294bb;
+	}
 }
 
 body {
-  color: var(--copy-color);
-  display: flex;
-  font: var(--base-font-size) "Open Sans", Helvetica, Arial, sans-serif;
-  justify-content: center;
-  line-height: 1.25;
-  -webkit-print-color-adjust: exact;
-}
-
-em {
-  color: var(--grey);
-}
-
-p {
-  font-size: 90%;
-}
-
-a {
-  color: var(--anchor-color);
-  font-weight: 400;
-  text-decoration: none;
-}
-
-ul {
-  margin-bottom: 0;
-}
-
-section {
-  margin: var(--spacing) 0 var(--spacing-double);
-}
-
-blockquote {
-  margin-bottom: 0 0 var(--spacing);
+	font-size: 12pt;
+	font-family: "Noto Serif", "Tinos", "Times", "Times New Roman", "Liberation Serif", serif;
+	text-align: justify;
+	color: var(--foreground);
+	background-color: var(--background);
+	margin: 1rem;
 }
 
 #resume {
-  background: var(--white);
-  margin: var(--spacing) var(--spacing-double);
-  max-width: 760px;
+	max-width: 55rem;
+	margin: 0 auto;
 }
 
-section.heading header h1 {
-  font-size: 180%;
-  font-weight: 300;
-  margin: 0;
-}
-section.heading header h2 {
-  font-size: 140%;
-  font-weight: 400;
-  margin: 0;
-}
-section.heading header h2::after {
-  display: none;
-}
-section.heading header .contact {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: var(--spacing);
-}
-@media (min-width: 567px) {
-  section.heading header .contact {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-section.heading header address {
-  font-size: 90%;
-  font-style: normal;
-  padding-bottom: var(--spacing);
-}
-section.heading .profiles {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: var(--spacing);
-}
-@media (min-width: 567px) {
-  section.heading .profiles {
-    flex-direction: row;
-    justify-content: start;
-  }
-}
-section.heading .profiles .profile.print {
-  display: none;
-}
-@media print {
-  section.heading .profiles .profile.print {
-    display: block;
-  }
-}
-section.heading .profiles strong {
-  margin: 0 var(--spacing-small) 0 0;
-}
-section.heading .profiles span {
-  margin: 0 var(--spacing-double) 0 0;
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
-section.experience .item {
-  border-bottom: 1px solid var(--light-grey);
-  margin: 0 0 0.5em;
-  padding: 0 0 0.5em;
-}
-section.experience .item:last-child {
-  border-bottom: none;
-}
-section.experience .item header a,
-section.experience .item header h3 {
-  color: var(--copy-color);
-  display: inline-block;
-  font-weight: 400;
-  text-decoration: none;
-}
-@media (max-width: 566px) {
-  section.experience .item header .subhead {
-    flex-direction: column;
-    margin-bottom: var(--spacing-double);
-  }
-}
-section.experience .item .summary p {
-  margin-top: var(--spacing);
-}
-section.experience .item .summary p:first-child {
-  margin-top: var(--spacing-small);
-}
-section.experience .item .summary p:last-child {
-  margin-bottom: var(--spacing-small);
-}
-section.experience .item .position {
-  color: var(--copy-color-light);
-  font-size: 100%;
-  font-weight: 500;
-  margin: var(--spacing-small) 0;
-}
-section.experience .item .startDate,
-section.experience .item .endDate {
-  color: var(--grey);
-}
-section.skills .item {
-  margin: 0;
-  padding: 0 0 var(--spacing);
-}
-section.skills .item:first-child {
-  margin-top: var(--spacing);
-}
-section.skills .item:last-child {
-  margin-bottom: var(--spacing);
-}
-section.skills .item .name {
-  display: inline-block;
-  font-size: 90%;
-  font-weight: 600;
-  margin: 0 var(--spacing) 0 0;
-  text-transform: uppercase;
-  vertical-align: top;
-  white-space: nowrap;
-}
-section.skills .item .keywords {
-  display: inline-block;
-  font-size: 90%;
-  vertical-align: top;
+h1 {
+	font-size: 200%;
 }
 
-section.volunteering .item .position {
-  font-weight: 600;
-}
-section.volunteering .item header .subhead {
-  margin-top: var(--spacing);
-}
-section.projects .item strong {
-  color: var(--copy-color-light);
-  font-weight: 600;
-  display: inline-block;
-  padding-top: var(--spacing);
-}
-section.awards .item .title {
-  font-weight: 600;
-}
-section.publications .item .name {
-  font-weight: 600;
-}
-section.languages .language-item {
-  align-items: baseline;
-  display: flex;
-  justify-content: start;
-}
-section.languages .language-item:first-child {
-  margin-top: var(--spacing);
-}
-section.languages .language-item:last-child {
-  margin-bottom: var(--spacing);
-}
-section.languages .language-item .language {
-  display: inline-block;
-  font-size: 90%;
-  font-weight: 600;
-  margin: 0 var(--spacing) 0 0;
-  text-transform: uppercase;
-  vertical-align: top;
-  white-space: nowrap;
-}
-section.languages .language-item .fluency {
-  color: var(--copy-color-light);
-  font-style: italic;
+h2,
+h3,
+h4 {
+	font-size: 100%;
 }
 
-section.interests .item {
-  margin-bottom: var(--spacing);
-}
-section.interests .item:last-child {
-  margin-bottom: var(--spacing);
-}
-section.interests .item .name {
-  display: inline-block;
-  font-size: 90%;
-  font-weight: 600;
-  margin: 0 var(--spacing) 0 0;
-  text-transform: uppercase;
-  vertical-align: top;
-  white-space: nowrap;
+h1,
+h2,
+#expertise h3 {
+	font-variant-caps: small-caps;
 }
 
-section.references .item blockquote {
-  font-style: italic;
-  margin-bottom: 0;
-  margin-left: var(--spacing);
-}
-section.references .item .name {
-  color: var(--copy-color-light);
+h2,
+#expertise h3 {
+	text-align: center;
 }
 
-section h2 {
-  color: var(--accent);
-  font-size: 135%;
-  font-weight: 400;
-  margin: 0 0 var(--spacing-double);
-  position: relative;
-  text-transform: uppercase;
-}
-section h2::after {
-  background: var(--accent);
-  bottom: -10px;
-  content: " ";
-  display: inline-block;
-  height: 3px;
-  left: 0;
-  position: absolute;
-  width: 2.5rem;
-}
-section header h3 {
-  margin: 0;
-  font-weight: 600;
+#skills h2,
+#languages h2,
+#awards h2,
+#work h2,
+#education h2,
+#publications h2,
+#projects h2,
+#volunteer h2,
+#interests h2,
+#references h2 {
+	margin: 1rem 0;
+	border-top: 2pt solid var(--foreground);
+	border-bottom: 3pt double var(--foreground);
 }
 
-section.experience .item .highlights, section.volunteering .highlights, section.projects .highlights,
-section.projects .keywords,
-section.projects .roles, section.education .item .courses {
-  font-size: 90%;
-  line-height: 1.3;
-  list-style: square;
-  margin: var(--spacing-small) 0 var(--spacing);
-  padding-left: var(--spacing-double);
+#contact h1 {
+	margin: 0 0 0.25rem 0;
+	border-bottom: 2pt solid var(--foreground);
 }
 
-section.experience .item, section.volunteering .item, section.projects .item, section.education .item, section.awards .item, section.publications .item, section.interests .item, section.references .item {
-  page-break-inside: avoid;
+address {
+	font-style: normal;
+	text-align: left;
 }
 
-@media print {
-  section.heading .profiles .profile:not(.print), section.publications .item .website {
-    display: none;
-  }
+address div,
+#topline div {
+	display: inline-block;
 }
 
-section.experience .item header .subhead, section.volunteering .item header .subhead, section.projects .item header, section.education .item header, section.awards .item header, section.publications .item .subhead {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-}
-@media (min-width: 567px) {
-  section.experience .item header .subhead, section.volunteering .item header .subhead, section.projects .item header, section.education .item header, section.awards .item header, section.publications .item .subhead {
-    flex-direction: row;
-  }
+#location::after,
+#phone::after,
+#email::after,
+.skill::after {
+	content: " | ";
 }
 
-@media print {
-  body {
-    font-size: 11pt;
-    margin: 0;
-    padding: 0;
-  }
+#website a,
+#publications a,
+#projects a {
+	color: var(--blue, blue);
+	text-decoration: underline;
 }
 
-	</style>
-	<style media="print">
-		body { font-size: 12px; }
-	</style>
+#website a:hover,
+#website a:active,
+#publications a:hover,
+#publications a:active,
+#projects a:hover,
+#projects a:active {
+	color: var(--aqua, cyan);
+}
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
-	
+#about h2 {
+	font-size: 150%;
+	margin: 1rem 0 0.25rem 0;
+}
+
+#topline {
+	text-align: center;
+}
+
+#topline,
+.studies {
+	font-weight: bold;
+}
+
+.skill:last-child::after {
+	content: none;
+}
+
+#expertise ul,
+#languages ul {
+	columns: 3;
+	max-height: 5rem;
+}
+
+#expertise li,
+#languages li {
+	text-align: left;
+	font-size: 90%;
+}
+
+#languages ul {
+	width: 20rem;
+	margin: 1em auto;
+}
+
+#skills dl,
+#interests dl {
+	padding: 0 40px;
+}
+
+#skills dt,
+#interests dt {
+	float: left;
+	clear: left;
+	width: 10rem;
+	margin-bottom: 2pt;
+	display: block;
+}
+
+#skills dd,
+#interests dd {
+	margin: 0 0 2pt 10rem;
+	display: block;
+}
+
+#skills dt::after,
+#previous dt::after,
+#interests dt::after {
+	content: ": ";
+}
+
+#awards ul {
+	padding: 0;
+}
+
+#awards li {
+	display: block;
+	text-align: center;
+}
+
+.organization header {
+	display: flex;
+}
+
+.organization h3,
+#previous dt {
+	text-transform: uppercase;
+}
+
+.organization h3 {
+	width: 75%;
+	margin: 0 0 2pt 0;
+}
+
+.organization h3 .location {
+	font-weight: normal;
+	font-style: italic;
+	text-transform: none;
+}
+
+.organization header .period {
+	width: 25%;
+	margin: 0 0 2pt 0;
+	text-align: right;
+}
+
+.position header {
+	display: block;
+}
+
+.position h4,
+.source {
+	font-style: italic;
+}
+
+.position h4 {
+	margin: 0 0 2pt 0;
+}
+
+.position h4 .period {
+	font-weight: normal;
+}
+
+.position ul {
+	margin: 0 0 1rem 0;
+}
+
+#previous dt,
+#previous dd {
+	display: inline;
+	margin: 0;
+}
+
+#education ul,
+#publications ul,
+#projects ul,
+#volunteer ul {
+	padding: 0;
+}
+
+#education li,
+#publications li,
+#projects li,
+#volunteer li {
+	display: block;
+}
+
+#education li {
+	margin-bottom: 1rem;
+}
+
+		</style>
+		<style media="print">
+			body {
+	padding: 0;
+	color: black;
+	background-color: white;
+}
+
+#resume {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+header {
+	break-after: avoid;
+	break-inside: avoid;
+}
+
+header ~ section:first-child {
+	break-before: avoid;
+}
+
+#about,
+.position,
+#previous,
+#references blockquote {
+	break-inside: avoid;
+}
+
+		</style>
 	</head>
-  <body>	
-    <div id="resume">
-      <section id="heading" class="heading">
-        <header>
-          <h1>
-            Nathan Acks
-          </h1>
-          <h2>IT Director → Penetration Tester / Ethical Hacker</h2>
-          <div class="summary"><p>Nathan Acks has over 20 years of experience in a wide variety of IT disciplines, including systems administration, website design, database administration, vendor and project management, and application development. In 2016 they helped found the IT & Security Team at the Public Interest Network (TPIN), and as its first director oversaw the push to modernize TPIN's IT infrastructure and improve its IT security programs. Nathan is now looking to return to a more hands-on role and build on their IT security experience by beginning a new career in cybersecurity.</p></div>
-          <div class="contact">
-            <span class="contact-detail"><a href="mailto:nathan.acks@cardboard-iguana.com">nathan.acks@cardboard-iguana.com</a></span>
-            <span class="contact-detail">(720) 806-0007</span>
-            <span class="contact-detail"><a href="http://cardboard-iguana.com" target="external">http://cardboard-iguana.com</a></span>
-          </div>
-          <address>
-            <span class="address-detail">Denver,</span>
-            <span class="address-detail">Colorado</span>
-            <span class="address-detail">US</span>
-          </address>
-        </header>
-      
-        <div class="profiles">
-          <div class="profile">
-            <strong class="network">GitHub</strong>
-            <span class="username">
-              <a href="https://github.com/necopinus" target="external">@necopinus</a>
-            </span>
-          </div>
-          <div class="profile print">
-            <span class="username">
-              https://github.com/necopinus
-            </span>
-          </div>
-          <div class="profile">
-            <strong class="network">Twitter</strong>
-            <span class="username">
-              <a href="https://twitter.com/necopinus" target="external">@necopinus</a>
-            </span>
-          </div>
-          <div class="profile print">
-            <span class="username">
-              https://twitter.com/necopinus
-            </span>
-          </div>
-        </div>
-      </section>
-      <section id="experience" class="experience">
-        <section class="item">
-          <h2>Experience</h2>
-          <header>
-            <h3 class="name"><a href="https://publicinterestnetwork.org" target="external">The Public Interest Network</a></h3>
-            <div class="subhead">
-            <span class="position">IT Director</span>
-            <small class="dates">Jun 2016
-             - Present</small>
-            </div>
-          </header>
-          <div class="summary"><p>Founded and oversaw The Public Interest Network's IT & Security team.</p></div>
-          <ul class="highlights">
-            <li>Responsible for writing and maintaining IT- and security-related documentation and training</li>
-            <li>Developed a security tier system for offices and staff in order to rationalize existing IT and physical security policies</li>
-            <li>Helped craft organization-wide security policies in close cooperation with the Legal team and the President&#x27;s Office</li>
-            <li>Bottom-line responsibility for roll-out, maintenance, security, and support for IT systems used by all staff, including email, user authentication, document management, and custom internal applications</li>
-            <li>Developed an internal system for tracking and managing the entire lifecycle for accounts in services managed by the IT &amp; Security team</li>
-            <li>Supervised the migration to Google Workspace from a legacy vendor email system</li>
-            <li>Supervised the migration to Okta from a legacy LDAP system</li>
-            <li>Managed roll-out of two-factor authentication to all full-time staff</li>
-            <li>Managed the transition  Microsoft 365</li>
-            <li>Managed the migration of multiple office-based phone systems to Zoom Phone</li>
-            <li>Upgraded and managed office networks across the continental US</li>
-            <li>Acted as the technical point of contact for IT-related PCI DSS issues</li>
-            <li>Investigated and remediated potential IT security incidents</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://publicinterestnetwork.org" target="external">The Public Interest Network</a></h3>
-            <div class="subhead">
-            <span class="position">Manager of Online Outreach Technology</span>
-            <small class="dates">Oct 2009
-             - Jun 2016</small>
-            </div>
-          </header>
-          <div class="summary"><p>Acted as point on data analysis, database development, and IT vendor management for the The Public Interest Network's digital organizing program.</p></div>
-          <ul class="highlights">
-            <li>Responsible for evaluating and developing new organizing tools and reports for the Digital team</li>
-            <li>Developed a custom Perl script for generating constituent mass-mailings</li>
-            <li>Managed multiple Ubuntu, CentOS, and Arch Linux servers running mission-critical applications such as LDAP/GOsa, MySQL, NFS, Git, Postfix, Apache, CiviCRM, and WebGUI</li>
-            <li>Responsible for contractor and vendor relations for all Digital team technology, as well as associate budgets</li>
-            <li>Oversaw the migration of an in-house constituent relationship management (CRM) and action system to Convio, and then later from Convio to Salsa and MySQL</li>
-            <li>Lead a project to integrate vendor CRM databases with a separate system hosted by ROI Solutions</li>
-            <li>Wrote and curated a large library of custom SQL and PL/SQL scripts for reporting and data import/export/clean-up</li>
-            <li>Aided in the development of content and outreach strategies as part of a rapid-response organizing team</li>
-            <li>Managed social media presence for the Recruitment team</li>
-            <li>Provided general tech support for my office&#x27;s staff and maintained the Denver office&#x27;s network</li>
-            <li>Acted as the technical point of contact for PCI DSS and computer security issues</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.usada.org" target="external">U.S. Anti-Doping Agency</a></h3>
-            <div class="subhead">
-            <span class="position">Chaperon</span>
-            <small class="dates">Jun 2009
-             - Sep 2009</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Supported the work of doping control officers by handling paperwork, monitoring athletes during testing, and providing other services as needed</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name">Equity, LLP</h3>
-            <div class="subhead">
-            <span class="position">Apartment Manager</span>
-            <small class="dates">Apr 2007
-             - May 2009</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Performed basic building maintenance and repair including yard work, gardening, and snow removal</li>
-            <li>Responsible for on-site security and tenant-landlord relations, including rent collection</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.tatteredcover.com" target="external">Tattered Cover</a></h3>
-            <div class="subhead">
-            <span class="position">Retail Manager</span>
-            <small class="dates">May 2008
-             - Jan 2009</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Managed teams of 3 - 12 book sellers</li>
-            <li>Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware)</li>
-            <li>Responsible for on-site security (including inventory and cash)</li>
-            <li>Regular book seller duties such as customer queries, product stocking, and cash handling</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.tatteredcover.com" target="external">Tattered Cover</a></h3>
-            <div class="subhead">
-            <span class="position">Floor Manager</span>
-            <small class="dates">Mar 2008
-             - May 2008</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Managed teams of 3 - 12 book sellers</li>
-            <li>Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware)</li>
-            <li>Responsible for on-site security (including inventory and cash)</li>
-            <li>Regular book seller duties such as customer queries, product stocking, and cash handling</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.tatteredcover.com" target="external">Tattered Cover</a></h3>
-            <div class="subhead">
-            <span class="position">Book Seller</span>
-            <small class="dates">Jul 2007
-             - Mar 2008</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled customer queries, product stocking, cash handling, and other aspects of floor book sales</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://ucdenver.edu" target="external">University of Colorado, Denver</a></h3>
-            <div class="subhead">
-            <span class="position">Computer Lab Assistant</span>
-            <small class="dates">Apr 2005
-             - Jun 2007</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Tutored students in mathematics and provided test proctoring services</li>
-            <li>Administered 35 Windows XP Professional clients and a Windows 2003 file server using Norton Ghost and Faronics Deep Freeze</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://ucdenver.edu" target="external">University of Colorado, Denver</a></h3>
-            <div class="subhead">
-            <span class="position">Graduate Teaching Assistant</span>
-            <small class="dates">Dec 2006
-             - May 2007</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Taught Mathematics for the Liberal Arts including the topics of logic, critical thinking, Venn diagrams, flow charts, units, percentages, scales, compound interest, savings plans and loans, basic statistics, basic probability, basic combinatorics, and exponential growth</li>
-            <li>Emphasized the importance of logical quantitative thinking, and how these skills can be integrated into all areas of life</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://ucdenver.edu" target="external">University of Colorado, Denver</a></h3>
-            <div class="subhead">
-            <span class="position">Graduate Teaching Assistant</span>
-            <small class="dates">Jul 2006
-             - Dec 2006</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Taught College Algebra including the topics of lines, circles, functions, polynomials, rational functions, inequalities, complex numbers, exponential functions, logarithmic functions, operations on functions, systems of linear equations, systems of linear inequalities, and matrix algebra</li>
-            <li>Emphasized technology-assisted learning with a particular focus on the use of the TI-83 and TI-84 calculators</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://ucdenver.edu" target="external">University of Colorado, Denver</a></h3>
-            <div class="subhead">
-            <span class="position">Graduate Teaching Assistant</span>
-            <small class="dates">Dec 2005
-             - May 2006</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Taught Calculus I recitation including the topics of limits, series, parametric equations, differentiation, simple differential equations, and Riemann integration</li>
-            <li>Emphasized technology-assisted learning with a particular focus on the use of the TI-83, TI-84, and TI-89 calculators, the Derive 5 software package, and McGraw-Hill&#x27;s MathZone skills assessment environment.</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.budget.com" target="external">Budget Car &amp; Truck Rental</a></h3>
-            <div class="subhead">
-            <span class="position">Summer Intern</span>
-            <small class="dates">May 2006
-             - Jul 2006</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Translated a non-linear optimization problem into GAMS code and generated a series of simplified network flow problems from the results</li>
-            <li>Verified model correctness by comparing logic and test results with those of an older model written in Fortran 95 using the NETSIDE solver</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name">OAO Technology Solutions</h3>
-            <div class="subhead">
-            <span class="position">Tape Operator</span>
-            <small class="dates">Jun 2004
-             - May 2005</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Backed up and restored servers, tracked tapes, and performed weekly and as-needed maintenance on data center tape drives and software for ING Security Life of Denver</li>
-            <li>Acted as the on-site backup for the backup administrator</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.barnesandnoble.com" target="external">Barnes &amp; Noble</a></h3>
-            <div class="subhead">
-            <span class="position">Book Seller</span>
-            <small class="dates">Oct 2004
-             - Jan 2005</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled customer queries, product stocking, and other aspects of floor book sales</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name">ImageNative Worlds, Inc.</h3>
-            <div class="subhead">
-            <span class="position">System Administrator &amp; Developer</span>
-            <small class="dates">Jan 2003
-             - Jun 2004</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Designed, implemented, and administered the corporate website and the web presence for Cyberpunk the Collectible Card Game, including the website, forums, and mailing lists</li>
-            <li>Provided systems administration and technical support in a network environment including Windows, Linux, and macOS systems, installed and maintained Apache web servers, MySQL database servers, and a Microsoft Exchange server</li>
-            <li>Supervised a team responsible for migrating sales and customer information databases from Microsoft Access to MySQL and scripting reporting queries</li>
-            <li>Assisted in the design and implementation of an extensible, plugin-based content management system written in SQL and object oriented PHP</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.comcast.com" target="external">Comcast</a></h3>
-            <div class="subhead">
-            <span class="position">Sales Associate</span>
-            <small class="dates">Apr 2003
-             - Aug 2003</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Verified data and provided sales support to internal business clients</li>
-            <li>Produced monthly performance reports and began to design a series of MsSQL/Python scripts to automate the process</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://ucdenver.edu" target="external">University of Colorado, Denver</a></h3>
-            <div class="subhead">
-            <span class="position">Computer Lab Assistant</span>
-            <small class="dates">May 2002
-             - May 2003</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Tutored students in mathematics and physics and proctored tests</li>
-            <li>Provided technical expertise and support during deployment of the Cygwin POSIX emulation environment in the Mathematics Education Resource Center (MERC) computer lab</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.tatteredcover.com" target="external">Tattered Cover</a></h3>
-            <div class="subhead">
-            <span class="position">Book Seller</span>
-            <small class="dates">May 2002
-             - Sep 2002</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled customer queries, product stocking, cash handling, and other aspects of floor book sales</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.nist.gov" target="external">NIST</a></h3>
-            <div class="subhead">
-            <span class="position">Intern</span>
-            <small class="dates">Apr 2000
-             - May 2002</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Used AutoCAD to diagram prototype electrical systems</li>
-            <li>Programmed prototype user interfaces and reporting algorithms using Rocky Mountain BASIC</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="http://www.pc-city.com" target="external">PC City</a></h3>
-            <div class="subhead">
-            <span class="position">Technician</span>
-            <small class="dates">Mar 2000
-             - May 2000</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Diagnosed problems in client workstations, constructed new systems, and configured computer networks using TCP/IP and DHCP</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name">CompUSA</h3>
-            <div class="subhead">
-            <span class="position">Software Sales</span>
-            <small class="dates">Aug 1999
-             - Mar 2000</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled software floor sales and product layout and acted as the de-facto manager of the software department&#x27;s day-to-day operations, including decisions about product layout, stocking priorities, and team work-flow</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.nrel.gov" target="external">NREL</a></h3>
-            <div class="subhead">
-            <span class="position">Summer Intern</span>
-            <small class="dates">Apr 1999
-             - Aug 1999</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Analyzed X-ray diffraction spectra and tested the electrical properties of various laboratory samples, and presented the results of this research into commercially viable p-type transparent conducting oxides at a National Laboratory System conference</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.mines.edu" target="external">Colorado School of Mines</a></h3>
-            <div class="subhead">
-            <span class="position">Computer Lab Assistant</span>
-            <small class="dates">Oct 1998
-             - May 1999</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Monitored student use of the Department of Engineering computer lab, providing technical support and policy enforcement as needed</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.mines.edu" target="external">Colorado School of Mines</a></h3>
-            <div class="subhead">
-            <span class="position">Office Assistant</span>
-            <small class="dates">Aug 1998
-             - May 1999</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled office and database administration for the Department of Engineering</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.costco.com" target="external">Costco Wholesale</a></h3>
-            <div class="subhead">
-            <span class="position">Stocker</span>
-            <small class="dates">Apr 1998
-             - Aug 1998</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Stocked products and handled on-floor customer service</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://butterflies.org" target="external">Butterfly Pavilion &amp; Insect Center</a></h3>
-            <div class="subhead">
-            <span class="position">Gift Shop Associate</span>
-            <small class="dates">Apr 1996
-             - Aug 1997</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Handled customer queries, product stocking, and other aspects of gift shop sales</li>
-          </ul>
-        </section>
-        <section class="item">
-          <header>
-            <h3 class="name"><a href="https://www.waterworldcolorado.com" target="external">Water World</a></h3>
-            <div class="subhead">
-            <span class="position">Cachier</span>
-            <small class="dates">Apr 1993
-             - Aug 1993</small>
-            </div>
-          </header>
-          <ul class="highlights">
-            <li>Admissions and food service cashiering</li>
-          </ul>
-        </section>
-      </section>
-      <section id="skills" class="skills">
-        <div class="item">
-          <h2>Skills</h2>
-          <div class="name">Penetration Testing</div>
-          <div class="keywords">
-            Burp Suite,
-            Kali Linux,
-            Metasploit,
-            Python,
-            Raspberry Pi
-          </div>
-        </div>
-        <div class="item">
-          <div class="name">Cybersecurity</div>
-          <div class="keywords">
-            Incident Response,
-            PCI DSS,
-            Security Policy
-          </div>
-        </div>
-        <div class="item">
-          <div class="name">IT Operations</div>
-          <div class="keywords">
-            Bash,
-            Cloud Computing,
-            Computer Networking,
-            Database Administration,
-            Database Design,
-            Documentation,
-            Google Cloud Platform,
-            Google Workspace,
-            Linux System Administration,
-            MySQL,
-            Office 365 Administration,
-            PL/SQL,
-            SQL,
-            Technical Support,
-            Web Servers,
-            Windows Server,
-            Zoom
-          </div>
-        </div>
-        <div class="item">
-          <div class="name">Web Development</div>
-          <div class="keywords">
-            CSS,
-            Git,
-            GitHub,
-            Jekyll,
-            Netlify,
-            PHP
-          </div>
-        </div>
-        <div class="item">
-          <div class="name">Management</div>
-          <div class="keywords">
-            Budgeting,
-            Information Technology Training,
-            Project Management,
-            Vendor Management
-          </div>
-        </div>
-      </section>
-      <section id="volunteering" class="volunteering">
-        <div class="item">
-          <h2>Volunteering</h2>
-          <header>
-            <h3 class="name">Yak Collective</h3>
-            <div class="subhead">
-              <span class="position">Yakshaver</span>
-              <small class="startDate">Apr 2020
-              - Present</small>
-            </div>
-          </header>
-          <div class="summary">An online space for people interested in collaborative tinkering towards a post-Weirding world.</div>
-          <ul class="highlights">
-            <li>Maintained a static website for the organization using GitHub, Netlify, Cloudinary, and IFTTT</li>
-            <li>Helped design and implement externally-facing project pages</li>
-            <li>Helped set up and maintain a member database using Knack</li>
-            <li>Part of the core team responsible for managing the organizational treasury using Gnosis Safe</li>
-          </ul>
-        </div>
-        <div class="item">
-          <header>
-            <h3 class="name">Colorado Indymedia</h3>
-            <div class="subhead">
-              <span class="position">Webmaster &amp; Reporter</span>
-              <small class="startDate">Apr 2009
-              - Mar 2013</small>
-            </div>
-          </header>
-          <div class="summary">Independent, volunteer-run news reporting website.</div>
-          <ul class="highlights">
-            <li>Maintained an independent media website based on Drupal, performing all necessary maintenance, upgrades, and modifications</li>
-            <li>Installed and maintained an Internet-facing web server (Ubuntu LAMP stack), and administered Mailman mailing lists</li>
-            <li>Contributed photography and stories</li>
-          </ul>
-        </div>
-        <div class="item">
-          <header>
-            <h3 class="name">Worldchanging</h3>
-            <div class="subhead">
-              <span class="position">Contributing Writer</span>
-              <small class="startDate">Nov 2006
-              - Jan 2008</small>
-            </div>
-          </header>
-          <div class="summary">A nonprofit dedicated to promoting bright green environmentalism.</div>
-          <ul class="highlights">
-            <li>Covered stories on sustainable development and emerging social and technological trends in the Mountain and Southwestern states region</li>
-          </ul>
-        </div>
-        <div class="item">
-          <header>
-            <h3 class="name">Colorado School of Mines Astronomy Club</h3>
-            <div class="subhead">
-              <span class="position">Secretary</span>
-              <small class="startDate">Aug 1998
-              - May 1999</small>
-            </div>
-          </header>
-          <div class="summary">A student club focused on amateur astronomy.</div>
-          <ul class="highlights">
-            <li>Designed and coded a small, client-oriented website using HTML</li>
-          </ul>
-        </div>
-        <div class="item">
-          <header>
-            <h3 class="name">Colorado School of Mines Yearbook</h3>
-            <div class="subhead">
-              <span class="position">Yearbook Staff</span>
-              <small class="startDate">Aug 1997
-              - Apr 1998</small>
-            </div>
-          </header>
-          <div class="summary">Student-run college yearbook.</div>
-          <ul class="highlights">
-            <li>Worked on advertising sales and designed the inside cover and table of contents using Adobe Illustrator</li>
-          </ul>
-        </div>
-        <div class="item">
-          <header>
-            <h3 class="name">Butterfly Pavilion &amp; Insect Center</h3>
-            <div class="subhead">
-              <span class="position">Volunteer Docent</span>
-              <small class="startDate">May 1995
-              - Aug 1997</small>
-            </div>
-          </header>
-          <div class="summary">The world&#x27;s first stand-alone, accredited non-profit invertebrate zoo.</div>
-          <ul class="highlights">
-            <li>Provided assistance and information to visitors</li>
-            <li>Assisted with animal feeding and care</li>
-          </ul>
-        </div>
-      </section>
-      <section id="education" class="education">
-        <div class="item">
-          <h2>Education</h2>
-          <header>
-              <h3 class="name">University of Colorado, Denver</h3>
-            <small class="dates">
-              <span class="startDate">Apr 2005</span>
-              <span class="endDate"> - May 2009</span>
-            </small>
-          </header>
-          <div class="qualification">
-            <span class="studyType">Masters</span>
-            <span class="area">Applied Mathematics</span>
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">University of Colorado, Denver</h3>
-            <small class="dates">
-              <span class="startDate">Jul 1999</span>
-              <span class="endDate"> - Dec 2003</span>
-            </small>
-          </header>
-          <div class="qualification">
-            <span class="studyType">Bachelors</span>
-            <span class="area">Theoretical Physics</span>
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">Colorado School of Mines</h3>
-            <small class="dates">
-              <span class="startDate">Jul 1997</span>
-              <span class="endDate"> - May 1999</span>
-            </small>
-          </header>
-          <div class="qualification">
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">Front Range Community College</h3>
-            <small class="dates">
-              <span class="startDate">Apr 1998</span>
-              <span class="endDate"> - Aug 1998</span>
-            </small>
-          </header>
-          <div class="qualification">
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">Northglenn High School</h3>
-            <small class="dates">
-              <span class="startDate">Jul 1994</span>
-              <span class="endDate"> - May 1997</span>
-            </small>
-          </header>
-          <div class="qualification">
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">Pecos Junior High School</h3>
-            <small class="dates">
-              <span class="startDate">Jul 1991</span>
-              <span class="endDate"> - May 1994</span>
-            </small>
-          </header>
-          <div class="qualification">
-          </div>
-        </div>
-        <div class="item">
-          <header>
-              <h3 class="name">Hillcrest Elementary School</h3>
-            <small class="dates">
-              <span class="startDate">Jul 1985</span>
-              <span class="endDate"> - May 1991</span>
-            </small>
-          </header>
-          <div class="qualification">
-          </div>
-        </div>
-      </section>
-      <section id="awards" class="awards">
-        <div class="item">
-          <h2>Awards</h2>
-          <header>
-            <div class="title">Pre Security Learning Path</div>
-            <small class="date">Sep 2021</small>
-          </header>
-          <div class="awarder">TryHackMe</div>
-        </div>
-        <div class="item">
-          <header>
-            <div class="title">Complete Beginner Learning Path</div>
-            <small class="date">Nov 2021</small>
-          </header>
-          <div class="awarder">TryHackMe</div>
-        </div>
-        <div class="item">
-          <header>
-            <div class="title">Web Fundamentals Learning Path</div>
-            <small class="date">Jan 2022</small>
-          </header>
-          <div class="awarder">TryHackMe</div>
-        </div>
-      </section>
-      <section id="languages" class="languages">
-        <div class="item">
-          <h2>Languages</h2>
-          <div class="language-item">
-            <span class="language">English:</span>
-            <span class="fluency">Native speaker</span>
-          </div>
-        </div>
-      </section>
-      <section id="interests" class="interests">
-        <div class="item">
-          <h2>Interests</h2>
-          <span class="name">Photography:</span>
-          <span class="keywords">
-            <span>Landscape Photography</span>,
-            <span>Urban Photography</span>,
-            <span>Macrophotography</span>,
-            <span>Adobe Lightroom</span>
-          </span>
-        </div>
-      </section>
-    </div>
+
+	<body>
+		<article id="resume">
+				<section id="basics">
+					<header id="contact">
+						<h1>Nathan Acks</h1>
+						<address>
+							<div id="location">
+								Denver,&nbsp;CO
+							</div>
+							<div id="phone">
+								<a href="tel:(720) 806-0007">(720) 806-0007</a>
+							</div>
+							<div id="email">
+								<a href="mailto:nathan.acks@cardboard-iguana.com">nathan.acks@cardboard-iguana.com</a>
+							</div>
+							<div id="website">
+								<a href="https://www.linkedin.com/in/necopinus">https://www.linkedin.com/in/necopinus</a>
+							</div>
+						</address>
+					</header>
+					<section id="about">
+						<header>
+							<h2>Cybersecurity Red Team</h2>
+								<div id="topline">
+										<div class="skill">Security Solutions</div>
+										<div class="skill">Organizational Leadership</div>
+										<div class="skill">Service Excellence</div>
+								</div>
+						</header>
+			
+						<p>Master's educated IT business professional with extensive experience providing the leadership and support needed to drive key organizational cybersecurity-related goals and objectives achievement. Able to analyze complex business environments, developing and implementing cybersecurity solutions designed to protect the company's hardware, software, and networks from threats and minimize risk. Proven strength building and maintaining long-term, professional relationships with strategic business partners and cybersecurity stakeholders based on the effectiveness of the solutions and support provided. Recognized for the ability to deliver impactful results while leading in fast-paced, dynamic technical business environments.</p>
+			
+							<section id="expertise">
+								<header>
+									<h3>Areas of Expertise</h3>
+								</header>
+			
+								<ul>
+										<li>Vulnerability Assessments</li>
+										<li>Investigations &amp; Research</li>
+										<li>Security Audits</li>
+										<li>Technical Project Management</li>
+										<li>Risk Analysis &amp; Management</li>
+										<li>Information Security Management</li>
+										<li>Technical Documentation</li>
+										<li>Strategic Business Partnerships</li>
+										<li>Strategy &amp; Execution</li>
+										<li>IT Security Programs</li>
+										<li>Stakeholder Communication</li>
+										<li>Vendor Relationships</li>
+								</ul>
+							</section>
+					</section>
+				</section>
+				<section id="skills">
+					<header>
+						<h2>Technical Proficiency</h2>
+					</header>
+			
+					<dl>
+							<dt>Penetration Testing</dt>
+							<dd>
+										Burp Suite, 
+										Kali Linux, 
+										Metasploit, 
+										Python, 
+										Raspberry Pi
+							</dd>
+							<dt>Cybersecurity</dt>
+							<dd>
+										Incident Response, 
+										PCI DSS, 
+										Security Policy
+							</dd>
+							<dt>IT Operations</dt>
+							<dd>
+										Bash, 
+										Cloud Computing, 
+										Computer Networking, 
+										Database Administration, 
+										Database Design, 
+										Documentation, 
+										Google Cloud Platform, 
+										Google Workspace, 
+										Linux System Administration, 
+										MySQL, 
+										Office 365 Administration, 
+										PL/SQL, 
+										SQL, 
+										Technical Support, 
+										Web Servers, 
+										Windows Server, 
+										Zoom
+							</dd>
+					</dl>
+				</section>
+				<section id="awards">
+					<header>
+						<h2>Certifications<!-- &amp; Accolades --></h2>
+					</header>
+			
+					<ul>
+								<li>
+									CompTIA Security+ (in progress) (<time datetime="2022-04-30">2022</time>)
+								</li>
+					</ul>
+				</section>
+				<section id="work">
+					<header><h2>Professional Experience</h2></header>
+			
+						<section id="recent">
+								<section class="organization">
+									<header>
+										<h3><a href="https://publicinterestnetwork.org">The Public Interest Network</a>, <span class="location">Denver, CO</span></h3>
+										<div class="period">
+												<time datetime="2009">2009</time> &ndash; Present
+										</div>
+									</header>
+			
+										<section class="position">
+											<header>
+												<h4>
+													Director of IT
+														<span class="period">(<time datetime="2016">2016</time> &ndash; Present)</span>
+												</h4>
+											</header>
+			
+											<ul>
+												<li>Founded and oversee the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.</li><li>Write and maintain IT and security-related documentation and trainings.</li><li>Hold bottom-line responsibility for the rollout, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.</li><li>Serve as the technical point-of-contact for IT-related PCI DSS issues, investigate and remediate potential IT security incidents, and write and maintain IT and security-related documentation and trainings.</li>
+			
+													<li>
+														Notable achievements while in the position have included:
+			
+														<ul>
+																<li>Developed and implemented a security tier system for offices and staff to rationalize existing IT and physical security policies.</li>
+																<li>Created an internal system for the provisioning and management of the full lifecycle for accounts in services management by the IT &amp; Security team.</li>
+																<li>Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.</li>
+																<li>Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.</li>
+																<li>Upgraded and managed office networks nationwide.</li>
+														</ul>
+													</li>
+											</ul>
+										</section>
+										<section class="position">
+											<header>
+												<h4>
+													Manager of Online Outreach Technology
+														<span class="period">(<time datetime="2009">2009</time> &ndash; <time datetime="2016">2016</time>)</span>
+												</h4>
+											</header>
+			
+											<ul>
+												<li>Served as the key point on data analysis, database development, and IT vendor management for the organization's digital organizing program.</li><li>Evaluated and developed new organizing tools and reports for the Digital team and created a customer Perl script to generate constituent mass-mailings.</li><li>Managed multiple Ubuntu, CentOS, and Arch Linux servers running mission-critical applications, including LDAP/GOsa, MySQL, NFS, Git, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.</li><li>Responsible for contractor and vendor relations for all Digital team technology, as well as associated budgets.</li><li>Wrote/curated a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.</li><li>Provided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.</li><li>Managed the social media presence for the Recruitment team and served as the technical point-of-contact for PCI DSS and computer security issues.</li><li>Provided general technical support for the Denver office's staff and maintained the office's network.</li>
+			
+													<li>
+														Notable achievements while in the position have included:
+			
+														<ul>
+																<li>Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to Convio, followed next to Salsa and MySQL.</li>
+																<li>Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions.</li>
+														</ul>
+													</li>
+											</ul>
+										</section>
+								</section>
+						</section>
+			
+						<section id="previous">
+							<dl>
+								<dt>Previous Employment</dt>
+								<dd>
+										Chaperon
+										&mdash; <a href="https://www.usada.org">U.S. Anti-Doping Agency</a>, 
+										Apartment Manager
+										&mdash; Equity, LLP, 
+										Retail Manager/Floor Manager/Book Seller
+										&mdash; <a href="https://www.tatteredcover.com">Tattered Cover Book Store</a>.
+								</dd>
+							</dl>
+						</section>
+				</section>
+				<section id="education">
+					<header>
+						<h2>Education</h2>
+					</header>
+			
+					<ul>
+								<li>
+										<span class="studies">Master&#x27;s of Science, Applied Mathematics</span> &mdash;
+									<a href="https://ucdenver.edu">University of Colorado, Denver, CO</a>
+								</li>
+								<li>
+										<span class="studies">Bachelor&#x27;s of Science, Theoretical Physics</span> &mdash;
+									<a href="https://ucdenver.edu">University of Colorado, Denver, CO</a>
+								</li>
+					</ul>
+				</section>
+				<section id="volunteer">
+					<header>
+						<h2>Community Involvement</h2>
+					</header>
+			
+					<ul>
+								<li>
+									Yakshaver &mdash; 
+									<a href="https://www.yakcollective.org">Yak Collective</a>
+										<span class="period">(<time datetime="2020">2020</time> &ndash; Present)</span>
+								</li>
+								<li>
+									Contributing Writer &mdash; 
+									Worldchanging
+										<span class="period">(<time datetime="2006">2006</time> &ndash; <time datetime="2008">2008</time>)</span>
+								</li>
+					</ul>
+				</section>
+		</article>
 	</body>
 </html>

@@ -1,0 +1,22 @@
+{{#if resume.projects.length}}
+	<section id="projects">
+		<header>
+			<h2>Side Projects</h2>
+		</header>
+
+		<ul>
+			{{#each resume.projects}}
+				{{#if include}}
+					<li>
+						{{#if url}}<a href="{{{url}}}">{{/if}}{{name}}{{#if url}}</a>{{/if}}
+						{{#if singleDate}}
+							<span class="period">(<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>)</span>
+						{{else}}
+							<span class="period">(<time datetime="{{onlyYear startDate}}">{{onlyYear startDate}}</time> &ndash; {{#if endDate}}<time datetime="{{onlyYear endDate}}">{{onlyYear endDate}}</time>{{else}}Present{{/if}})</span>
+						{{/if}}
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</section>
+{{/if}}

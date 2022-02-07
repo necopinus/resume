@@ -1,0 +1,17 @@
+{{#if resume.awards.length}}
+	<section id="awards">
+		<header>
+			<h2>Certifications<!-- &amp; Accolades --></h2>
+		</header>
+
+		<ul>
+			{{#each resume.awards}}
+				{{#if include}}
+					<li>
+						{{#if awarder}}{{awarder}} {{/if}}{{#if title}}{{title}}{{/if}}{{#if date}} (<time datetime="{{date}}">{{onlyYear date}}</time>){{/if}}
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</section>
+{{/if}}
