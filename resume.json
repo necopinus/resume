@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Nathan Acks",
-    "label": "Cybersecurity Red Team",
+    "label": "Breaker of Things",
     "image": "https://raw.githubusercontent.com/necopinus/resume/main/avatar.jpg",
     "email": "nathan.acks@cardboard-iguana.com",
     "phone": "(720) 806-0007",
     "url": "https://cardboard-iguana.com",
-    "summary": "Master's educated IT business professional with extensive experience providing the leadership and support needed to drive key organizational cybersecurity-related goals and objectives achievement. Able to analyze complex business environments, developing and implementing cybersecurity solutions designed to protect the company's hardware, software, and networks from threats and minimize risk. Proven strength building and maintaining long-term, professional relationships with strategic business partners and cybersecurity stakeholders based on the effectiveness of the solutions and support provided. Recognized for the ability to deliver impactful results while leading in fast-paced, dynamic technical business environments.",
+    "summary": "Master's educated IT security professional.",
     "location": {
       "city": "Denver",
       "countryCode": "US",
@@ -18,20 +18,19 @@
         "network": "GitHub",
         "username": "necopinus",
         "url": "https://github.com/necopinus"
-      },
-      {
-        "network": "Keybase",
-        "username": "necopinus",
-        "url": "https://keybase.io/necopinus"
-      },
-      {
-        "network": "Twitter",
-        "username": "necopinus",
-        "url": "https://twitter.com/necopinus"
       }
     ]
   },
   "work": [
+    {
+      "name": "Security Innovation",
+      "location": "Denver, CO",
+      "description": "Computer and Network Security",
+      "position": "Security Engineer I",
+      "url": "https://www.securityinnovation.com",
+      "startDate": "2022-05-09",
+      "summary": "Worked closely with other application security engineers to perform reviews and tests on Web and Conventional applications as well as embedded, firmware, mobile, and more.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped tools to aid penetration test automation and effectiveness.\n\nReviewed code for common security vulnerabilities."
+    },
     {
       "name": "The Public Interest Network",
       "location": "Denver, CO",
@@ -39,7 +38,8 @@
       "position": "Director of IT",
       "url": "https://publicinterestnetwork.org",
       "startDate": "2016-06-27",
-      "summary": "Founded and oversee the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrite and maintain IT and security-related documentation and trainings.\n\nHold bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServe as the technical point-of-contact for IT-related PCI DSS issues, investigate and remediate potential IT security incidents, and maintain IT and security-related documentation and trainings.",
+      "endDate": "2022-05-06",
+      "summary": "Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrote and maintained IT and security-related documentation and trainings.\n\nHeld bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServed as the technical point-of-contact for IT-related PCI DSS issues, investigated and remediated potential IT security incidents, and maintained IT and security-related documentation and trainings.",
       "highlights": [
         "Developed and implemented a security tier system for offices and staff to rationalize existing IT and physical security policies.",
         "Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT & Security team.",
