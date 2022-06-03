@@ -403,8 +403,8 @@
   ],
   "awards": [
     {
-      "title": "Security+ (in progress)",
-      "date": "2022-04-30",
+      "title": "Security+",
+      "date": "2022-06-01",
       "awarder": "CompTIA"
     }
   ],
@@ -478,7 +478,7 @@
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
     "version": "v2.0.0",
-    "lastModified": "2022-02-07T07:34:00",
+    "lastModified": "2022-06-02T19:58:00",
     "theme": "jacrys"
   }
 }
