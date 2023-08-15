@@ -1,5 +1,5 @@
 var fs = require("fs");
-var path = require('path');
+var path = require("path");
 var Handlebars = require("handlebars");
 
 // Define custom render() function.

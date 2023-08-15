@@ -1,5 +1,12 @@
 {
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init": "resumed init",
+    "start": "resumed --theme jsonresume-theme-local"
+  },
   "dependencies": {
-    "resume-cli": "*"
+    "jsonresume-theme-local": "file:./theme",
+    "resumed": "^3.0.0"
   }
 }

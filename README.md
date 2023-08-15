@@ -2,9 +2,9 @@
 
 To build:
 
-1. Generate HTML using `./node_modules/.bin/resume export resume.html --theme .`.
+1. Generate HTML using `./node_modules/.bin/resumed render --theme jsonresume-theme-local`.
 
-2. Open the HTML file up in Chrome and print it there. Adjust the margins to be as close to 1.25" as possible while maintaining sane page breaks.
+2. Open the HTML file up in Chrome and print it there. Adjust the margins to match the HTML text width and provide sane page breaks (0.75" top/bottom and 0.5" left/right seems to work well).
 
 ## Unused Sections
 

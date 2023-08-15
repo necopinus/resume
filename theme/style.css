@@ -40,7 +40,7 @@ body {
 }
 
 #resume {
-	max-width: 55rem;
+	max-width: 45rem;
 	margin: 0 auto;
 }
 
@@ -80,7 +80,7 @@ h2,
 #volunteer h2,
 #interests h2,
 #references h2 {
-	margin: 1rem 0;
+	margin: 1.25rem 0;
 	border-top: 2pt solid var(--foreground);
 	border-bottom: 3pt double var(--foreground);
 }
@@ -145,12 +145,14 @@ address div,
 #languages ul {
 	columns: 3;
 	max-height: 5rem;
+	margin-left: -0.5rem;
 }
 
 #expertise li,
 #languages li {
 	text-align: left;
 	font-size: 90%;
+	margin-left: 0.5rem;
 }
 
 #languages ul {

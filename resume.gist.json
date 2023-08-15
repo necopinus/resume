@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Nathan Acks",
-    "label": "Cybersecurity Red Team",
+    "label": "Breaker of Things",
     "image": "https://raw.githubusercontent.com/necopinus/resume/main/avatar.jpg",
     "email": "nathan.acks@cardboard-iguana.com",
     "phone": "(720) 806-0007",
     "url": "https://cardboard-iguana.com",
-    "summary": "Master's educated IT business professional with extensive experience providing the leadership and support needed to drive key organizational cybersecurity-related goals and objectives achievement. Able to analyze complex business environments, developing and implementing cybersecurity solutions designed to protect the company's hardware, software, and networks from threats and minimize risk. Proven strength building and maintaining long-term, professional relationships with strategic business partners and cybersecurity stakeholders based on the effectiveness of the solutions and support provided. Recognized for the ability to deliver impactful results while leading in fast-paced, dynamic technical business environments.",
+    "summary": "Master's educated IT security professional.",
     "location": {
       "city": "Denver",
       "countryCode": "US",
@@ -15,28 +15,22 @@
     },
     "profiles": [
       {
-        "network": "LinkedIn",
-        "username": "necopinus",
-        "url": "https://www.linkedin.com/in/necopinus"
-      },
-      {
         "network": "GitHub",
         "username": "necopinus",
         "url": "https://github.com/necopinus"
-      },
-      {
-        "network": "Keybase",
-        "username": "necopinus",
-        "url": "https://keybase.io/necopinus"
-      },
-      {
-        "network": "Twitter",
-        "username": "necopinus",
-        "url": "https://twitter.com/necopinus"
       }
     ]
   },
   "work": [
+    {
+      "name": "Security Innovation",
+      "location": "Denver, CO",
+      "description": "Computer and Network Security",
+      "position": "Security Engineer I",
+      "url": "https://www.securityinnovation.com",
+      "startDate": "2022-05-09",
+      "summary": "Worked closely with other application security engineers to perform reviews and tests on Web and Conventional applications as well as embedded, firmware, mobile, and more.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped tools to aid penetration test automation and effectiveness.\n\nReviewed code for common security vulnerabilities."
+    },
     {
       "name": "The Public Interest Network",
       "location": "Denver, CO",
@@ -44,7 +38,8 @@
       "position": "Director of IT",
       "url": "https://publicinterestnetwork.org",
       "startDate": "2016-06-27",
-      "summary": "Founded and oversee the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrite and maintain IT and security-related documentation and trainings.\n\nHold bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServe as the technical point-of-contact for IT-related PCI DSS issues, investigate and remediate potential IT security incidents, and maintain IT and security-related documentation and trainings.",
+      "endDate": "2022-05-06",
+      "summary": "Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrote and maintained IT and security-related documentation and trainings.\n\nHeld bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServed as the technical point-of-contact for IT-related PCI DSS issues, investigated and remediated potential IT security incidents, and maintained IT and security-related documentation and trainings.",
       "highlights": [
         "Developed and implemented a security tier system for offices and staff to rationalize existing IT and physical security policies.",
         "Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT & Security team.",
@@ -66,71 +61,6 @@
         "Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to Convio, followed next to Salsa and MySQL.",
         "Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions."
       ]
-    },
-    {
-      "name": "U.S. Anti-Doping Agency",
-      "location": "Boulder, CO",
-      "description": "Drug Testing for Professional Sports",
-      "position": "Chaperon",
-      "url": "https://www.usada.org",
-      "startDate": "2009-07-01",
-      "endDate": "2009-09-31",
-      "summary": "Supported the work of doping control officers by handling paperwork, monitoring athletes during testing, and providing other services as needed."
-    },
-    {
-      "name": "Equity, LLP",
-      "location": "Denver, CO",
-      "description": "Real Estate Sales & Management",
-      "position": "Apartment Manager",
-      "startDate": "2007-05-01",
-      "endDate": "2009-05-31",
-      "summary": "Performed basic building maintenance and repair including yard work, gardening, and snow removal.\n\nResponsible for on-site security and tenant-landlord relations, including rent collection."
-    },
-    {
-      "name": "Tattered Cover Book Store",
-      "location": "Denver, CO",
-      "description": "Bookstore",
-      "position": "Retail Manager",
-      "url": "https://www.tatteredcover.com",
-      "startDate": "2008-06-01",
-      "endDate": "2009-01-31",
-      "summary": "Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).\n\nResponsible for on-site security (including inventory and cash).\n\nManaged teams of 3 - 12 book sellers.\n\nRegular book seller duties such as customer queries, product stocking, and cash handling."
-    },
-    {
-      "name": "Tattered Cover Book Store",
-      "location": "Denver, CO",
-      "description": "Bookstore",
-      "position": "Floor Manager",
-      "url": "https://www.tatteredcover.com",
-      "startDate": "2008-04-01",
-      "endDate": "2008-05-31",
-      "summary": "Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).\n\nResponsible for on-site security (including inventory and cash).\n\nManaged teams of 3 - 12 book sellers.\n\nRegular book seller duties such as customer queries, product stocking, and cash handling."
-    },
-    {
-      "name": "Tattered Cover Book Store",
-      "location": "Denver, CO",
-      "description": "Bookstore",
-      "position": "Book Seller",
-      "url": "https://www.tatteredcover.com",
-      "startDate": "2007-08-01",
-      "endDate": "2008-03-31",
-      "summary": "Handled customer queries, product stocking, cash handling, and other aspects of floor book sales."
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Yak Collective",
-      "position": "Yakshaver",
-      "url": "https://www.yakcollective.org",
-      "startDate": "2020-05-01",
-      "summary": "Maintained a static website for the organization using GitHub, Netlify, Cloudinary, and IFTTT.\n\nHelped design and implement externally-facing project pages.\n\nHelped set up and maintain a member database using Knack.\n\nPart of the core team responsible for managing the organizational treasury using Colony and Gnosis Safe."
-    },
-    {
-      "organization": "Worldchanging",
-      "position": "Contributing Writer",
-      "startDate": "2006-12-01",
-      "endDate": "2008-01-31",
-      "summary": "Covered stories on sustainable development and emerging social and technological trends in the Mountain and Southwestern states region."
     }
   ],
   "education": [
@@ -153,12 +83,37 @@
   ],
   "awards": [
     {
-      "title": "Security+ (in progress)",
-      "date": "2022-04-30",
+      "title": "Security+",
+      "date": "2022-06-01",
       "awarder": "CompTIA"
     }
   ],
   "skills": [
+    {
+      "name": "Topline Skills",
+      "keywords": [
+        "Security Solutions",
+        "Organizational Leadership",
+        "Service Excellence"
+      ]
+    },
+    {
+      "name": "Areas of Expertise",
+      "keywords": [
+        "Vulnerability Assessments",
+        "Investigations & Research",
+        "Security Audits",
+        "Technical Project Management",
+        "Risk Analysis & Management",
+        "Information Security Management",
+        "Technical Documentation",
+        "Strategic Business Partnerships",
+        "Strategy & Execution",
+        "IT Security Programs",
+        "Stakeholder Communication",
+        "Vendor Relationships"
+      ]
+    },
     {
       "name": "Penetration Testing",
       "keywords": [
@@ -202,8 +157,8 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
-    "version": "v2.0.0",
-    "lastModified": "2022-02-07T07:34:00",
+    "version": "v2.0.1",
+    "lastModified": "2023-08-15T13:01:00",
     "theme": "jacrys"
   }
 }
