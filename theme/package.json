@@ -1,4 +1,9 @@
 {
+  "name": "jsonresume-theme-local",
+  "version": "1.0.0",
+  "description": "Local theme for Nathan Acks' resume",
+  "main": "index.js",
+  "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "private": true,
   "dependencies": {
     "handlebars": "*"
