@@ -1,4 +1,9 @@
 {
+  "name": "nathan-acks-resume",
+  "version": "1.0.0",
+  "description": "Nathan Acks' resume",
+  "repository": "git@github.com:necopinus/resume.git",
+  "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
   "private": true,
   "type": "module",
   "scripts": {
