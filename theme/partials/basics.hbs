@@ -3,18 +3,26 @@
 		<header id="contact">
 			<h1>{{name}}</h1>
 			<address>
-				<div id="location">
-					{{location.city}},&nbsp;{{location.region}}
-				</div>
-				<div id="phone">
-					<a href="tel:{{{phone}}}">{{phone}}</a>
-				</div>
-				<div id="email">
-					<a href="mailto:{{{email}}}">{{email}}</a>
-				</div>
-				<div id="website">
-					<a href="{{{url}}}">{{url}}</a>
-				</div>
+				{{#if location.city}}
+					<div id="location">
+						{{location.city}}{{#if location.region}},&nbsp;{{location.region}}{{/if}}
+					</div>
+				{{/if}}
+				{{#if phone}}
+					<div id="phone">
+						<a href="tel:{{{phone}}}">{{phone}}</a>
+					</div>
+				{{/if}}
+				{{#if email}}
+					<div id="email">
+						<a href="mailto:{{{email}}}">{{email}}</a>
+					</div>
+				{{/if}}
+				{{#if url}}
+					<div id="website">
+						<a href="{{{url}}}">{{url}}</a>
+					</div>
+				{{/if}}
 			</address>
 		</header>
 		<section id="about">
