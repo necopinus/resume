@@ -4,7 +4,7 @@ To build:
 
 1. Generate HTML using `yarn run resumed render --theme jsonresume-theme-local`.
 
-2. Open the HTML file up in Chrome and print it there. Adjust the margins to match the HTML text width and provide sane page breaks (0.75" top/bottom and 0.5" left/right seems to work well).
+2. Open the HTML file up in Chrome and print it there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).
 
 ## Unused Sections
 
@@ -12,6 +12,9 @@ Currently unused sections (example data taken from the [JSON Resume sample file]
 
 ```json
 {
+  "basics": {
+    "phone": "(123) 456-7890"
+  },
   "publications": [
     {
       "name": "Video compression for 3d media",
