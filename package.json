@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "jsonresume-theme-local": "file:./theme",
-    "resumed": "^3.0.1"
+    "resumed": "*"
   }
 }
