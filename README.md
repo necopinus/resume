@@ -1,4 +1,4 @@
-# My Resume
+# My resume
 
 To build:
 
@@ -6,7 +6,7 @@ To build:
 
 2. Open the HTML file up in Chrome and print it there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).
 
-## Unused Sections
+## Unused sections
 
 Currently unused sections (example data taken from the [JSON Resume sample file](https://github.com/jsonresume/resume-schema/blob/master/sample.resume.json)):
 
