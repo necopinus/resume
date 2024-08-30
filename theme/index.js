@@ -54,8 +54,8 @@ function render(resume) {
 	//
 	var today = new Date();
 	var thisYear = today.getFullYear()
-	var lastRecentYear = thisYear - 7;
-	var lastPreviousYear = thisYear - 14;
+	var lastRecentYear = thisYear - 10;
+	var lastPreviousYear = thisYear - 15;
 
 	// Walk over the resume.work array and determine if each
 	// position should be classified as "recent", "previous", or

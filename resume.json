@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Nathan Acks",
-    "label": "Breaker of Things",
+    "label": "Attendere ad singula",
     "image": "https://raw.githubusercontent.com/necopinus/resume/main/avatar.jpg",
     "email": "nathan.acks@cardboard-iguana.com",
     "url": "https://cardboard-iguana.com",
@@ -25,10 +25,24 @@
       "name": "Security Innovation",
       "location": "Denver, CO",
       "description": "Computer and Network Security",
+      "position": "Security Engineer II",
+      "url": "https://www.securityinnovation.com",
+      "startDate": "2024-02-05",
+      "summary": "Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.\n\nWorked closely with other application security engineers to perform reviews and tests on web applications, thick clients, mobile applications, IoT devices, and more.\n\nReviewed code for common security vulnerabilities.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped in-house and open source tools to aid penetration test automation and effectiveness.",
+      "highlights": [
+        "Developed a standardized testing environment using Linux containers (Docker/Podman) and Kali Linux. Open source fork: https://github.com/cardboard-iguana/disposable-kali",
+        "Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access."
+      ]
+    },
+    {
+      "name": "Security Innovation",
+      "location": "Denver, CO",
+      "description": "Computer and Network Security",
       "position": "Security Engineer I",
       "url": "https://www.securityinnovation.com",
       "startDate": "2022-05-09",
-      "summary": "Worked closely with other application security engineers to perform reviews and tests on Web and Conventional applications as well as embedded, firmware, mobile, and more.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped tools to aid penetration test automation and effectiveness.\n\nReviewed code for common security vulnerabilities."
+      "endDate": "2024-02-04",
+      "summary": "Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nReviewed code for common security vulnerabilities.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed."
     },
     {
       "name": "The Public Interest Network",
@@ -54,7 +68,7 @@
       "position": "Manager of Online Outreach Technology",
       "url": "https://publicinterestnetwork.org",
       "startDate": "2009-10-05",
-      "endDate": "2016-06-24",
+      "endDate": "2016-06-26",
       "summary": "Served as the key point on data analysis, database development, and IT vendor management for the organization's digital organizing program.\n\nEvaluated and developed new organizing tools and reports for the Digital team and created a customer Perl script to generate constituent mass-mailings.\n\nManaged multiple Ubuntu, CentOS, and Arch Linux servers running mission-critical applications, including LDAP/GOsa, MySQL, NFS, Git, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.\n\nResponsible for contractor and vendor relations for all Digital team technology, as well as associated budgets.\n\nWrote/curated a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.\n\nProvided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.\n\nManaged the social media presence for the Recruitment team and served as the technical point-of-contact for PCI DSS and computer security issues.\n\nProvided general technical support for the Denver office's staff and maintained the office's network.",
       "highlights": [
         "Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to Convio, followed next to Salsa and MySQL.",

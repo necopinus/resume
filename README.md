@@ -2,9 +2,20 @@
 
 To build:
 
-1. Generate HTML using `yarn run resumed render --theme jsonresume-theme-local`.
+1. Install necessary packages (and refresh lock file).
 
-2. Open the HTML file up in Chrome and print it there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).
+   ```bash
+   rm yarn.lock
+   yarn install
+   ```
+
+2. Generate full and highlight resume versions.
+
+   ```bash
+   yarn run resumed render --theme jsonresume-theme-local
+   ```
+
+3. Open the HTML files up in Chrome and print from there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).
 
 ## Unused sections
 

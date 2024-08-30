@@ -25,3 +25,7 @@ header ~ section:first-child {
 #references blockquote {
 	break-inside: avoid;
 }
+
+section#work .organization:not(:first-of-type) {
+	margin-top: 1.25rem;
+}
