@@ -27,9 +27,9 @@ handlebars@*:
     handlebars "*"
 
 jsonschema@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/jsonschema/-/jsonschema-1.4.1.tgz#cc4c3f0077fb4542982973d8a083b6b34f482dab"
-  integrity sha512-S6cATIPVv1z0IlxdN+zUk5EPjkGCdnhN4wVSBlvoUO1tOLJootbo9CquNJmbIh4yikWHiUedhRYrNPn1arpEmQ==
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/jsonschema/-/jsonschema-1.5.0.tgz#f6aceb1ab9123563dd901d05f81f9d4883d3b7d8"
+  integrity sha512-K+A9hhqbn0f3pJX17Q/7H6yQfD/5OXgdrR5UE12gMXCiN9D5Xq2o5mddV2QEcX/bjla99ASsAAQUyMCCRWAEhw==
 
 minimist@^1.2.5:
   version "1.2.8"
@@ -47,12 +47,13 @@ neo-async@^2.6.2:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 resumed@*:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resumed/-/resumed-4.0.0.tgz#331a4465f394293e999eb1c0bf0607a4a0d8e8ee"
-  integrity sha512-K7offFV1MbTgcmv5J8rQBZoOMqfLZ7jRgSOTYhvXz2FBmKI5KNKl6HbeRDxLjr0p0nuuczBdzgegqULPYOn4Zw==
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/resumed/-/resumed-5.0.0.tgz#40325163c0bbe409dec3621df7eda66f08a04b14"
+  integrity sha512-6h1ybWudo8OzIP9kR2d4Ff9U49ra773XqIkLjHk3FAcIEJGb4iH6L/96qiMbSkOG7MZrnCWLSZd1OHzdtgPuIA==
   dependencies:
     "@jsonresume/schema" "^1.0.0"
     sade "^1.7.0"
+    strip-json-comments "^5.0.1"
     yoctocolors "^2.0.0"
 
 sade@^1.7.0:
@@ -66,6 +67,11 @@ source-map@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+strip-json-comments@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-5.0.1.tgz#0d8b7d01b23848ed7dbdf4baaaa31a8250d8cfa0"
+  integrity sha512-0fk9zBqO67Nq5M/m45qHCJxylV/DhBlIOVExqgOMiCCrzrhU6tCibRXNqE3jwJLftzE9SNuZtYbpzcO+i9FiKw==
 
 uglify-js@^3.1.4:
   version "3.19.3"
