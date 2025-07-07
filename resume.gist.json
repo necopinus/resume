@@ -22,24 +22,24 @@
   },
   "work": [
     {
-      "name": "Security Innovation",
+      "name": "Bureau Veritas Cybersecurity North America",
       "location": "Denver, CO",
-      "description": "Computer and Network Security",
+      "description": "Penetration Testing and Red Teaming",
       "position": "Security Engineer II",
-      "url": "https://www.securityinnovation.com",
+      "url": "https://cybersecurity.bureauveritas.com",
       "startDate": "2024-02-05",
       "summary": "Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.\n\nWorked closely with other application security engineers to perform reviews and tests on web applications, thick clients, mobile applications, IoT devices, and more.\n\nReviewed code for common security vulnerabilities.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped in-house and open source tools to aid penetration test automation and effectiveness.",
       "highlights": [
-        "Developed a standardized testing environment using Linux containers (Docker/Podman) and Kali Linux. Open source fork: https://github.com/cardboard-iguana/disposable-kali",
+        "Developed a standardized testing environment using Linux containers (Docker/Podman) and Debian Linux.",
         "Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access."
       ]
     },
     {
-      "name": "Security Innovation",
+      "name": "Bureau Veritas Cybersecurity North America",
       "location": "Denver, CO",
-      "description": "Computer and Network Security",
+      "description": "Penetration Testing and Red Teaming",
       "position": "Security Engineer I",
-      "url": "https://www.securityinnovation.com",
+      "url": "https://cybersecurity.bureauveritas.com",
       "startDate": "2022-05-09",
       "endDate": "2024-02-04",
       "summary": "Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nReviewed code for common security vulnerabilities.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed."
