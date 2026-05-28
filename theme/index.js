@@ -2,6 +2,17 @@ var fs = require("fs");
 var path = require("path");
 var Handlebars = require("handlebars");
 
+// Length options.
+//
+// recentHistoryCutOff - Only education/work/volunteer history within
+// the specified number of years will be included in full.
+//
+// summaryHistoryCutOff - Education/work/volunteer history older than
+// the specified number of years will not be included at all.
+// 
+var recentHistoryCutOff = 10; // Default: 10
+var summaryHistoryCutOff = 15; // Default: 15
+
 // Define custom render() function.
 //
 function render(resume) {
@@ -54,8 +65,8 @@ function render(resume) {
 	//
 	var today = new Date();
 	var thisYear = today.getFullYear()
-	var lastRecentYear = thisYear - 10;
-	var lastPreviousYear = thisYear - 15;
+	var lastRecentYear = thisYear - recentHistoryCutOff;
+	var lastPreviousYear = thisYear - summaryHistoryCutOff;
 
 	// Walk over the resume.work array and determine if each
 	// position should be classified as "recent", "previous", or

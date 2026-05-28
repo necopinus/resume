@@ -5,14 +5,14 @@ To build:
 1. Install necessary packages (and refresh lock file).
 
    ```bash
-   rm yarn.lock
-   yarn install
+   rm pnpm-lock.yaml
+   pnpm install
    ```
 
 2. Generate full and highlight resume versions.
 
    ```bash
-   yarn run resumed render --theme jsonresume-theme-local
+   ./node_modules/.bin/resumed render --theme jsonresume-theme-local
    ```
 
 3. Open the HTML files up in Chrome and print from there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).

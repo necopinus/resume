@@ -6,7 +6,7 @@
     "image": "https://raw.githubusercontent.com/necopinus/resume/main/avatar.jpg",
     "email": "nathan.acks@cardboard-iguana.com",
     "url": "https://cardboard-iguana.com",
-    "summary": "Master's educated IT security professional.",
+    "summary": "Nathan Acks is a security engineer and penetration tester with broad cross-domain experience. His offensive security work spans web applications, thick clients, mobile applications, and smart contracts, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise.\n\nNathan has developed and led a variety of trainings, ranging from multi-day security trainings for client software development teams to one-on-one workshops on operational security for non-technical staff. Before working for Bureau Veritas Cybersecurity, Nathan founded and led the IT & Security Team at a national nonprofit, crafting organization-wide security policies, trainings, and strategy documents in partnership with legal and executive leadership. This experience grounds his technical work in deep understanding of real organizational and business needs.",
     "location": {
       "city": "Denver",
       "countryCode": "US",
@@ -28,9 +28,9 @@
       "position": "Security Engineer II",
       "url": "https://cybersecurity.bureauveritas.com",
       "startDate": "2024-02-05",
-      "summary": "Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.\n\nWorked closely with other application security engineers to perform reviews and tests on web applications, thick clients, mobile applications, IoT devices, and more.\n\nReviewed code for common security vulnerabilities.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed.\n\nDeveloped in-house and open source tools to aid penetration test automation and effectiveness.",
+      "summary": "Coordinated scoping calls and process improvements as a technical project manager for a major global client.\n\nDeveloped and lead multi-day security trainings for client software development teams.\n\nLed teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.\n\nDeveloped in-house and open source tools to aid penetration test automation and effectiveness.",
       "highlights": [
-        "Developed a standardized testing environment using Linux containers (Docker/Podman) and Debian Linux.",
+        "Developed a standardized testing environment using Nix flakes.",
         "Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access."
       ]
     },
@@ -42,7 +42,7 @@
       "url": "https://cybersecurity.bureauveritas.com",
       "startDate": "2022-05-09",
       "endDate": "2024-02-04",
-      "summary": "Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.\n\nUsed a combination of manual and automated techniques to assess risks and circumvent security mechanisms of devices and applications.\n\nReviewed code for common security vulnerabilities.\n\nCreated threat models that resulted in more secure application design.\n\nDesigned and developed security testing scenarios.\n\nAnalyzed and presented results of testing to team members, managers, and customers.\n\nWrote detailed problem reports, test plan documents, and mitigation recommendations as needed."
+      "summary": "Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.\n\nCreated threat models that resulted in more secure application design.\n\nAnalyzed and presented results of testing to team members, managers, and customers."
     },
     {
       "name": "The Public Interest Network",
@@ -52,13 +52,11 @@
       "url": "https://publicinterestnetwork.org",
       "startDate": "2016-06-27",
       "endDate": "2022-05-06",
-      "summary": "Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrote and maintained IT and security-related documentation and trainings.\n\nHeld bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServed as the technical point-of-contact for IT-related PCI DSS issues, investigated and remediated potential IT security incidents, and maintained IT and security-related documentation and trainings.",
+      "summary": "Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.\n\nWrote and maintained IT and security-related documentation and trainings.\n\nHeld bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.\n\nServed as the technical point-of-contact for IT-related PCI DSS issues.\n\nInvestigated and remediated potential IT security incidents.",
       "highlights": [
-        "Developed and implemented a security tier system for offices and staff to rationalize existing IT and physical security policies.",
         "Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT & Security team.",
         "Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.",
-        "Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.",
-        "Upgraded and managed office networks nationwide."
+        "Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide."
       ]
     },
     {
@@ -69,9 +67,9 @@
       "url": "https://publicinterestnetwork.org",
       "startDate": "2009-10-05",
       "endDate": "2016-06-26",
-      "summary": "Served as the key point on data analysis, database development, and IT vendor management for the organization's digital organizing program.\n\nEvaluated and developed new organizing tools and reports for the Digital team and created a customer Perl script to generate constituent mass-mailings.\n\nManaged multiple Ubuntu, CentOS, and Arch Linux servers running mission-critical applications, including LDAP/GOsa, MySQL, NFS, Git, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.\n\nResponsible for contractor and vendor relations for all Digital team technology, as well as associated budgets.\n\nWrote/curated a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.\n\nProvided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.\n\nManaged the social media presence for the Recruitment team and served as the technical point-of-contact for PCI DSS and computer security issues.\n\nProvided general technical support for the Denver office's staff and maintained the office's network.",
+      "summary": "Provided data analysis, database development, and IT vendor management for the organization's digital organizing program.\n\nManaged multiple Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.\n\nMaintained a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.\n\nProvided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.",
       "highlights": [
-        "Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to Convio, followed next to Salsa and MySQL.",
+        "Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to a vendor CRM (Convio, and later Salsa).",
         "Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions."
       ]
     }
@@ -96,7 +94,7 @@
   ],
   "awards": [
     {
-      "title": "Security+",
+      "title": "Security+ (2022 – 2025)",
       "date": "2022-06-01",
       "awarder": "CompTIA"
     }
@@ -115,16 +113,13 @@
       "keywords": [
         "Vulnerability Assessments",
         "Investigations & Research",
-        "Security Audits",
+        "Smart Contract Audits",
         "Technical Project Management",
         "Risk Analysis & Management",
-        "Information Security Management",
         "Technical Documentation",
         "Strategic Business Partnerships",
         "Strategy & Execution",
-        "IT Security Programs",
-        "Stakeholder Communication",
-        "Vendor Relationships"
+        "Stakeholder Communication"
       ]
     },
     {
@@ -134,7 +129,7 @@
         "Kali Linux",
         "Metasploit",
         "Python",
-        "Raspberry Pi"
+        "Solidity"
       ]
     },
     {
@@ -142,36 +137,26 @@
       "keywords": [
         "Incident Response",
         "PCI DSS",
+        "Security Training",
         "Security Policy"
       ]
     },
     {
       "name": "IT Operations",
       "keywords": [
-        "Bash",
-        "Cloud Computing",
-        "Computer Networking",
+        "Linux Administration",
         "Database Administration",
-        "Database Design",
-        "Documentation",
-        "Google Cloud Platform",
+        "Amazon Web Services",
         "Google Workspace",
-        "Linux System Administration",
-        "MySQL",
-        "Office 365 Administration",
-        "PL/SQL",
-        "SQL",
-        "Technical Support",
-        "Web Servers",
-        "Windows Server",
-        "Zoom"
+        "Office 365",
+        "Technical Support"
       ]
     }
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/necopinus/resume/main/resume.json",
-    "version": "v2.0.1",
-    "lastModified": "2023-08-15T13:01:00",
+    "version": "v2.0.2",
+    "lastModified": "2026-05-28T15:15:00",
     "theme": "jacrys"
   }
 }
