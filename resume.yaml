@@ -1,0 +1,417 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+#
+# Nathan Acks' resume — the full record. ./build.sh trims this down to a
+# two-page resume.pdf / resume.html (see README.md).
+#
+# Preserved from the old resume.json meta block:
+#   version: v2.0.2, lastModified: 2026-05-28T15:15:00
+#   canonical: https://raw.githubusercontent.com/necopinus/resume/main/resume.json
+#
+# Known validation warnings (accepted for now):
+#   - basics.summary is 2 characters over the schema's 1024-character limit
+#   - pre-college / non-degree education entries are missing the required
+#     `degree` (no suitable enum value exists) and `area` fields
+---
+content:
+  basics:
+    name: Nathan Acks
+    headline: Attendere ad singula
+    email: nathan.acks@cardboard-iguana.com
+    url: https://cardboard-iguana.com
+    summary: |
+      Nathan Acks is a security engineer and penetration tester with broad cross-domain experience. His offensive security work spans web applications, thick clients, mobile applications, and smart contracts, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise.
+
+      Nathan has developed and led a variety of trainings, ranging from multi-day security trainings for client software development teams to one-on-one workshops on operational security for non-technical staff. Before working for Bureau Veritas Cybersecurity, Nathan founded and led the IT & Security Team at a national nonprofit, crafting organization-wide security policies, trainings, and strategy documents in partnership with legal and executive leadership. This experience grounds his technical work in deep understanding of real organizational and business needs.
+  location:
+    city: Denver
+    region: CO
+    country: United States
+  profiles:
+  - network: GitHub
+    username: necopinus
+    url: https://github.com/necopinus
+  skills:
+  - name: Topline Skills
+    level: Intermediate
+    keywords:
+    - Security Solutions
+    - Organizational Leadership
+    - Service Excellence
+  - name: Areas of Expertise
+    level: Intermediate
+    keywords:
+    - Vulnerability Assessments
+    - Investigations & Research
+    - Smart Contract Audits
+    - Technical Project Management
+    - Risk Analysis & Management
+    - Technical Documentation
+    - Strategic Business Partnerships
+    - Strategy & Execution
+    - Stakeholder Communication
+  - name: Penetration Testing
+    level: Intermediate
+    keywords:
+    - Burp Suite
+    - Kali Linux
+    - Metasploit
+    - Python
+    - Solidity
+  - name: Cybersecurity
+    level: Intermediate
+    keywords:
+    - Incident Response
+    - PCI DSS
+    - Security Training
+    - Security Policy
+  - name: IT Operations
+    level: Intermediate
+    keywords:
+    - Linux Administration
+    - Database Administration
+    - Amazon Web Services
+    - Google Workspace
+    - Office 365
+    - Technical Support
+  awards:
+  - title: Security+ (2022 – 2025)
+    awarder: CompTIA
+    date: '2022-06-01'
+  work:
+  - name: Bureau Veritas Cybersecurity North America
+    position: Security Engineer II
+    url: https://cybersecurity.bureauveritas.com
+    startDate: '2024-02-05'
+    summary: |
+      - Coordinated scoping calls and process improvements as a technical project manager for a major global client.
+      - Developed and lead multi-day security trainings for client software development teams.
+      - Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.
+      - Developed in-house and open source tools to aid penetration test automation and effectiveness.
+      - Notable achievements in the position include:
+        - Developed a standardized testing environment using Nix flakes.
+        - Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access.
+  - name: Bureau Veritas Cybersecurity North America
+    position: Security Engineer I
+    url: https://cybersecurity.bureauveritas.com
+    startDate: '2022-05-09'
+    endDate: '2024-02-04'
+    summary: |
+      - Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.
+      - Created threat models that resulted in more secure application design.
+      - Analyzed and presented results of testing to team members, managers, and customers.
+  - name: The Public Interest Network
+    position: Director of IT
+    url: https://publicinterestnetwork.org
+    startDate: '2016-06-27'
+    endDate: '2022-05-06'
+    summary: |
+      - Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.
+      - Wrote and maintained IT and security-related documentation and trainings.
+      - Held bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.
+      - Served as the technical point-of-contact for IT-related PCI DSS issues.
+      - Investigated and remediated potential IT security incidents.
+      - Notable achievements in the position include:
+        - Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT & Security team.
+        - Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.
+        - Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.
+  - name: The Public Interest Network
+    position: Manager of Online Outreach Technology
+    url: https://publicinterestnetwork.org
+    startDate: '2009-10-05'
+    endDate: '2016-06-26'
+    summary: |
+      - Provided data analysis, database development, and IT vendor management for the organization's digital organizing program.
+      - Managed multiple Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.
+      - Maintained a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.
+      - Provided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.
+      - Notable achievements in the position include:
+        - Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to a vendor CRM (Convio, and later Salsa).
+        - Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions.
+  - name: U.S. Anti-Doping Agency
+    position: Chaperon
+    url: https://www.usada.org
+    startDate: '2009-07-01'
+    endDate: '2009-09-31'
+    summary: |
+      - Supported the work of doping control officers by handling paperwork, monitoring athletes during testing, and providing other services as needed.
+  - name: Equity, LLP
+    position: Apartment Manager
+    startDate: '2007-05-01'
+    endDate: '2009-05-31'
+    summary: |
+      - Performed basic building maintenance and repair including yard work, gardening, and snow removal.
+      - Responsible for on-site security and tenant-landlord relations, including rent collection.
+  - name: Tattered Cover Book Store
+    position: Retail Manager
+    url: https://www.tatteredcover.com
+    startDate: '2008-06-01'
+    endDate: '2009-01-31'
+    summary: |
+      - Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
+      - Responsible for on-site security (including inventory and cash).
+      - Managed teams of 3 - 12 book sellers.
+      - Regular book seller duties such as customer queries, product stocking, and cash handling.
+  - name: Tattered Cover Book Store
+    position: Floor Manager
+    url: https://www.tatteredcover.com
+    startDate: '2008-04-01'
+    endDate: '2008-05-31'
+    summary: |
+      - Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
+      - Responsible for on-site security (including inventory and cash).
+      - Managed teams of 3 - 12 book sellers.
+      - Regular book seller duties such as customer queries, product stocking, and cash handling.
+  - name: Tattered Cover Book Store
+    position: Book Seller
+    url: https://www.tatteredcover.com
+    startDate: '2007-08-01'
+    endDate: '2008-03-31'
+    summary: |
+      - Handled customer queries, product stocking, cash handling, and other aspects of floor book sales.
+  - name: University of Colorado, Denver
+    position: Computer Lab Assistant
+    url: https://ucdenver.edu
+    startDate: '2005-05-01'
+    endDate: '2007-06-31'
+    summary: |
+      - Tutored students in mathematics and provided test proctoring services.
+      - Administered 35 Windows XP Professional clients and a Windows 2003 file server using Norton Ghost and Faronics Deep Freeze.
+  - name: University of Colorado, Denver
+    position: Graduate Teaching Assistant
+    url: https://ucdenver.edu
+    startDate: '2007-01-01'
+    endDate: '2007-05-31'
+    summary: |
+      - Taught Mathematics for the Liberal Arts including the topics of logic, critical thinking, Venn diagrams, flow charts, units, percentages, scales, compound interest, savings plans and loans, basic statistics, basic probability, basic combinatorics, and exponential growth.
+      - Emphasized the importance of logical quantitative thinking, and how these skills can be integrated into all areas of life.
+  - name: University of Colorado, Denver
+    position: Graduate Teaching Assistant
+    url: https://ucdenver.edu
+    startDate: '2006-08-01'
+    endDate: '2006-12-31'
+    summary: |
+      - Taught College Algebra including the topics of lines, circles, functions, polynomials, rational functions, inequalities, complex numbers, exponential functions, logarithmic functions, operations on functions, systems of linear equations, systems of linear inequalities, and matrix algebra.
+      - Emphasized technology-assisted learning with a particular focus on the use of the TI-83 and TI-84 calculators.
+  - name: Budget Car & Truck Rental
+    position: Summer Intern
+    url: https://www.budget.com
+    startDate: '2006-06-01'
+    endDate: '2006-08-01'
+    summary: |
+      - Translated a non-linear optimization problem into GAMS code and generated a series of simplified network flow problems from the results.
+      - Verified model correctness by comparing logic and test results with those of an older model written in Fortran 95 using the NETSIDE solver.
+  - name: University of Colorado, Denver
+    position: Graduate Teaching Assistant
+    url: https://ucdenver.edu
+    startDate: '2006-01-01'
+    endDate: '2006-05-31'
+    summary: |
+      - Taught Calculus I recitation including the topics of limits, series, parametric equations, differentiation, simple differential equations, and Riemann integration.
+      - Emphasized technology-assisted learning with a particular focus on the use of the TI-83, TI-84, and TI-89 calculators, the Derive 5 software package, and McGraw-Hill's MathZone skills assessment environment.
+  - name: OAO Technology Solutions
+    position: Tape Operator
+    startDate: '2004-07-01'
+    endDate: '2005-05-31'
+    summary: |
+      - Backed up and restored servers, tracked tapes, and performed weekly and as-needed maintenance on data center tape drives and software for ING Security Life of Denver.
+      - Acted as the on-site backup for the backup administrator.
+  - name: Barnes & Noble
+    position: Book Seller
+    url: https://www.barnesandnoble.com
+    startDate: '2004-11-01'
+    endDate: '2005-01-31'
+    summary: |
+      - Handled customer queries, product stocking, and other aspects of floor book sales.
+  - name: ImageNative Worlds, Inc.
+    position: System Administrator & Developer
+    startDate: '2003-02-01'
+    endDate: '2004-06-30'
+    summary: |
+      - Designed, implemented, and administered the corporate website and the web presence for Cyberpunk the Collectible Card Game.
+      - Provided systems administration and technical support in a hetrogenous network environment.
+      - Installed and maintained Apache HTTP, MySQL, and a Microsoft Exchange serverd.
+      - Assisted in the design and implementation of an extensible content management system written in object oriented PHP.
+  - name: Comcast
+    position: Sales Associate
+    url: https://www.comcast.com
+    startDate: '2003-05-01'
+    endDate: '2003-08-31'
+    summary: |
+      - Verified data and provided sales support to internal business clients.
+      - Produced monthly performance reports and began to design a series of MsSQL/Python scripts to automate the process.
+  - name: University of Colorado, Denver
+    position: Computer Lab Assistant
+    url: https://ucdenver.edu
+    startDate: '2002-06-01'
+    endDate: '2003-05-31'
+    summary: |
+      - Tutored students in mathematics and physics and proctored tests.
+      - Provided technical expertise and support during deployment of the Cygwin POSIX emulation environment in the Mathematics Education Resource Center (MERC) computer lab.
+  - name: Tattered Cover Book Store
+    position: Book Seller
+    url: https://www.tatteredcover.com
+    startDate: '2002-06-01'
+    endDate: '2002-09-30'
+    summary: |
+      - Handled customer queries, product stocking, cash handling, and other aspects of floor book sales.
+  - name: NIST
+    position: Intern
+    url: https://www.nist.gov
+    startDate: '2000-05-01'
+    endDate: '2002-05-31'
+    summary: |
+      - Used AutoCAD to diagram prototype electrical systems.
+      - Programmed prototype user interfaces and reporting algorithms using Rocky Mountain BASIC.
+  - name: PC City
+    position: Technician
+    url: http://www.pc-city.com
+    startDate: '2000-04-01'
+    endDate: '2000-05-31'
+    summary: |
+      - Diagnosed problems in client workstations, constructed new systems, and configured computer networks using TCP/IP and DHCP.
+  - name: CompUSA
+    position: Software Sales
+    startDate: '1999-09-01'
+    endDate: '2000-03-31'
+    summary: |
+      - Handled software floor sales and product layout and acted as the de-facto manager of the software department's day-to-day operations, including decisions about product layout, stocking priorities, and team work-flow.
+  - name: NREL
+    position: Summer Intern
+    url: https://www.nrel.gov
+    startDate: '1999-05-01'
+    endDate: '1999-08-31'
+    summary: |
+      - Analyzed X-ray diffraction spectra and tested the electrical properties of various laboratory samples, and presented the results of this research into commercially viable p-type transparent conducting oxides at a National Laboratory System conference.
+  - name: Colorado School of Mines
+    position: Computer Lab Assistant
+    url: https://www.mines.edu
+    startDate: '1998-11-01'
+    endDate: '1999-05-31'
+    summary: |
+      - Monitored student use of the Department of Engineering computer lab, providing technical support and policy enforcement as needed.
+  - name: Colorado School of Mines
+    position: Office Assistant
+    url: https://www.mines.edu
+    startDate: '1998-09-01'
+    endDate: '1999-05-31'
+    summary: |
+      - Handled office and database administration for the Department of Engineering.
+  - name: Costco Wholesale
+    position: Stocker
+    url: https://www.costco.com
+    startDate: '1998-05-01'
+    endDate: '1998-08-31'
+    summary: |
+      - Stocked products and handled on-floor customer service.
+  - name: Butterfly Pavilion & Insect Center
+    position: Gift Shop Associate
+    url: https://butterflies.org
+    startDate: '1996-05-01'
+    endDate: '1997-08-31'
+    summary: |
+      - Handled customer queries, product stocking, and other aspects of gift shop sales.
+  - name: Water World
+    position: Cachier
+    url: https://www.waterworldcolorado.com
+    startDate: '1993-05-01'
+    endDate: '1993-08-31'
+    summary: |
+      - Admissions and food service cashiering.
+  education:
+  - institution: University of Colorado, Denver, CO
+    url: https://ucdenver.edu
+    degree: Master
+    area: Applied Mathematics
+    startDate: '2005-05-01'
+    endDate: '2009-05-31'
+  - institution: University of Colorado, Denver, CO
+    url: https://ucdenver.edu
+    degree: Bachelor
+    area: Theoretical Physics
+    startDate: '1999-08-01'
+    endDate: '2003-12-31'
+  - institution: Colorado School of Mines, Golden, CO
+    url: https://www.mines.edu
+    startDate: '1997-08-01'
+    endDate: '1999-05-31'
+  - institution: Front Range Community College, Wesminster, CO
+    url: https://www.frontrange.edu
+    startDate: '1998-05-01'
+    endDate: '1998-08-31'
+  - institution: Northglenn High School, Northglenn, CO
+    url: https://northglennh.adams12.org
+    degree: High School
+    startDate: '1994-08-01'
+    endDate: '1997-05-31'
+  - institution: Pecos Junior High School, Thornotn, CO
+    degree: Middle School
+    startDate: '1991-08-01'
+    endDate: '1994-05-31'
+  - institution: Hillcrest Elementary School, Northglenn, CO
+    url: https://hillcrest.adams12.org
+    startDate: '1985-08-01'
+    endDate: '1991-05-31'
+  volunteer:
+  - organization: Yak Collective
+    position: Yakshaver
+    url: https://www.yakcollective.org
+    startDate: '2020-05-01'
+    summary: |
+      - Maintained a static website for the organization using GitHub, Netlify, Cloudinary, and IFTTT.
+      - Helped design and implement externally-facing project pages.
+      - Helped set up and maintain a member database using Knack.
+      - Part of the core team responsible for managing the organizational treasury using Colony and Gnosis Safe.
+  - organization: Colorado Indymedia
+    position: Webmaster & Reporter
+    startDate: '2009-05-01'
+    endDate: '2013-03-31'
+    summary: |
+      - Maintained an independent media website based on Drupal, performing all necessary maintenance, upgrades, and modifications.
+      - Installed and maintained an Internet-facing web server (Ubuntu LAMP stack), and administered Mailman mailing lists.
+      - Contributed photography and stories.
+  - organization: Worldchanging
+    position: Contributing Writer
+    startDate: '2006-12-01'
+    endDate: '2008-01-31'
+    summary: |
+      - Covered stories on sustainable development and emerging social and technological trends in the Mountain and Southwestern states region.
+  - organization: Colorado School of Mines Astronomy Club
+    position: Secretary
+    startDate: '1998-09-01'
+    endDate: '1999-05-31'
+    summary: |
+      - Designed and coded a small, client-oriented website using HTML.
+  - organization: Colorado School of Mines Yearbook
+    position: Yearbook Staff
+    startDate: '1997-09-01'
+    endDate: '1998-05-01'
+    summary: |
+      - Worked on advertising sales and designed the inside cover and table of contents using Adobe Illustrator.
+  - organization: Butterfly Pavilion & Insect Center
+    position: Volunteer Docent
+    url: https://butterflies.org
+    startDate: '1995-06-01'
+    endDate: '1997-08-31'
+    summary: |
+      - Provided assistance and information to visitors and participated in animal feeding and care.
+locale:
+  language: en
+layouts:
+- engine: latex
+  template: moderncv-classic
+  sections: &id001
+    order:
+    - basics
+    - skills
+    - awards
+    - work
+    - education
+    - volunteer
+    aliases:
+      work: Professional Experience
+      volunteer: Community Involvement
+      awards: Certifications
+      skills: Technical Proficiency
+- engine: html
+  template: calm
+  sections: *id001

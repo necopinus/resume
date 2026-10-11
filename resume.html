@@ -1,891 +1,517 @@
 <!DOCTYPE html>
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>Nathan Acks &mdash; Attendere ad singula</title>
-
-		<style>
-			/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
-body {
-  margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-  display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-  display: none;
-}
-
-		</style>
-		<style>
-			@media (prefers-color-scheme: light) {
-	/* https://github.com/chriskempson/tomorrow-theme#tomorrow */
-
-	:root {
-		--background: #ffffff;
-		--foreground: #4d4d4c;
-		--red: #c82829;
-		--orange: #f5871f;
-		--yellow: #eab700;
-		--green: #718c00;
-		--aqua: #3e999f;
-		--blue: #4271ae;
-		--purple: #8959a8;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	/* https://github.com/chriskempson/tomorrow-theme#tomorrow-night */
-
-	:root {
-		--background: #1d1f21;
-		--foreground: #c5c8c6;
-		--red: #cc6666;
-		--orange: #de935f;
-		--yellow: #f0c674;
-		--green: #b5bd68;
-		--aqua: #8abeb7;
-		--blue: #81a2be;
-		--purple: #b294bb;
-	}
-}
-
-body {
-	font-size: 11pt;
-	font-family: "Noto Serif", "Tinos", "Times", "Times New Roman", "Liberation Serif", serif;
-	text-align: justify;
-	color: var(--foreground);
-	background-color: var(--background);
-	margin: 1rem;
-}
-
-#resume {
-	max-width: 45rem;
-	margin: 0 auto;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-h1 {
-	font-size: 200%;
-}
-
-h2,
-h3,
-h4 {
-	font-size: 100%;
-}
-
-h1,
-h2,
-#expertise h3 {
-	font-variant-caps: small-caps;
-}
-
-h2,
-#expertise h3 {
-	text-align: center;
-}
-
-#skills h2,
-#languages h2,
-#awards h2,
-#work h2,
-#education h2,
-#publications h2,
-#projects h2,
-#volunteer h2,
-#interests h2,
-#references h2 {
-	margin: 1.25rem 0;
-	border-top: 2pt solid var(--foreground);
-	border-bottom: 3pt double var(--foreground);
-}
-
-#contact h1 {
-	margin: 0 0 0.25rem 0;
-	border-bottom: 2pt solid var(--foreground);
-}
-
-address {
-	font-style: normal;
-	text-align: left;
-}
-
-address div,
-#topline div {
-	display: inline-block;
-}
-
-#location::after,
-#phone::after,
-#email::after,
-.skill::after {
-	content: " | ";
-}
-
-#website a,
-#publications a,
-#projects a {
-	color: var(--blue, blue);
-	text-decoration: underline;
-}
-
-#website a:hover,
-#website a:active,
-#publications a:hover,
-#publications a:active,
-#projects a:hover,
-#projects a:active {
-	color: var(--aqua, cyan);
-}
-
-#about h2 {
-	font-size: 150%;
-	margin: 1rem 0 0.25rem 0;
-}
-
-#topline {
-	text-align: center;
-}
-
-#topline,
-.studies {
-	font-weight: bold;
-}
-
-.skill:last-child::after {
-	content: none;
-}
-
-#expertise ul,
-#languages ul {
-	columns: 3;
-	max-height: 5rem;
-	margin-left: -0.5rem;
-}
-
-#expertise li,
-#languages li {
-	text-align: left;
-	font-size: 90%;
-	margin-left: 0.5rem;
-}
-
-#languages ul {
-	width: 20rem;
-	margin: 1em auto;
-}
-
-#skills dl,
-#interests dl {
-	padding: 0 40px;
-}
-
-#skills dt,
-#interests dt {
-	float: left;
-	clear: left;
-	width: 10rem;
-	margin-bottom: 2pt;
-	display: block;
-}
-
-#skills dd,
-#interests dd {
-	margin: 0 0 2pt 10rem;
-	display: block;
-}
-
-#skills dt::after,
-#previous dt::after,
-#interests dt::after {
-	content: ": ";
-}
-
-#awards ul {
-	padding: 0;
-}
-
-#awards li {
-	display: block;
-	text-align: center;
-}
-
-.organization header {
-	display: flex;
-}
-
-.organization h3,
-#previous dt {
-	text-transform: uppercase;
-}
-
-.organization h3 {
-	width: 75%;
-	margin: 0 0 2pt 0;
-}
-
-.organization h3 .location {
-	font-weight: normal;
-	font-style: italic;
-	text-transform: none;
-}
-
-.organization header .period {
-	width: 25%;
-	margin: 0 0 2pt 0;
-	text-align: right;
-}
-
-.position header {
-	display: block;
-}
-
-.position h4,
-.source {
-	font-style: italic;
-}
-
-.position h4 {
-	margin: 0 0 2pt 0;
-}
-
-.position h4 .period {
-	font-weight: normal;
-}
-
-.position ul {
-	margin: 0 0 1rem 0;
-}
-
-#previous dt,
-#previous dd {
-	display: inline;
-	margin: 0;
-}
-
-#education ul,
-#publications ul,
-#projects ul,
-#volunteer ul {
-	padding: 0;
-}
-
-#education li,
-#publications li,
-#projects li,
-#volunteer li {
-	display: block;
-}
-
-#education li {
-	margin-bottom: 1rem;
-}
-		</style>
-		<style media="print">
-			body {
-	padding: 0;
-	color: black;
-	background-color: white;
-}
-
-#resume {
-	width: 100%;
-	max-width: 100%;
-	margin: 0;
-}
-
-header {
-	break-after: avoid;
-	break-inside: avoid;
-}
-
-header ~ section:first-child {
-	break-before: avoid;
-}
-
-#about,
-.position,
-#previous,
-#references blockquote {
-	break-inside: avoid;
-}
-
-section#work .organization:not(:first-of-type) {
-	margin-top: 1.25rem;
-}
-
-		</style>
-	</head>
-
-	<body>
-		<article id="resume">
-				<section id="basics">
-					<header id="contact">
-						<h1>Nathan Acks</h1>
-						<address>
-								<div id="location">
-									Denver,&nbsp;CO
-								</div>
-								<div id="email">
-									<a href="mailto:nathan.acks@cardboard-iguana.com">nathan.acks@cardboard-iguana.com</a>
-								</div>
-								<div id="website">
-									<a href="https://cardboard-iguana.com">https://cardboard-iguana.com</a>
-								</div>
-						</address>
-					</header>
-					<section id="about">
-						<header>
-							<h2>Attendere ad singula</h2>
-								<div id="topline">
-										<div class="skill">Security Solutions</div>
-										<div class="skill">Organizational Leadership</div>
-										<div class="skill">Service Excellence</div>
-								</div>
-						</header>
-			
-						<p>Nathan Acks is a security engineer and penetration tester with broad cross-domain experience. His offensive security work spans web applications, thick clients, mobile applications, and smart contracts, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise.</p><p>Nathan has developed and led a variety of trainings, ranging from multi-day security trainings for client software development teams to one-on-one workshops on operational security for non-technical staff. Before working for Bureau Veritas Cybersecurity, Nathan founded and led the IT & Security Team at a national nonprofit, crafting organization-wide security policies, trainings, and strategy documents in partnership with legal and executive leadership. This experience grounds his technical work in deep understanding of real organizational and business needs.</p>
-			
-							<section id="expertise">
-								<header>
-									<h3>Areas of Expertise</h3>
-								</header>
-			
-								<ul>
-										<li>Vulnerability Assessments</li>
-										<li>Investigations &amp; Research</li>
-										<li>Smart Contract Audits</li>
-										<li>Technical Project Management</li>
-										<li>Risk Analysis &amp; Management</li>
-										<li>Technical Documentation</li>
-										<li>Strategic Business Partnerships</li>
-										<li>Strategy &amp; Execution</li>
-										<li>Stakeholder Communication</li>
-								</ul>
-							</section>
-					</section>
-				</section>
-				<section id="skills">
-					<header>
-						<h2>Technical Proficiency</h2>
-					</header>
-			
-					<dl>
-							<dt>Penetration Testing</dt>
-							<dd>
-										Burp Suite, 
-										Kali Linux, 
-										Metasploit, 
-										Python, 
-										Solidity
-							</dd>
-							<dt>Cybersecurity</dt>
-							<dd>
-										Incident Response, 
-										PCI DSS, 
-										Security Training, 
-										Security Policy
-							</dd>
-							<dt>IT Operations</dt>
-							<dd>
-										Linux Administration, 
-										Database Administration, 
-										Amazon Web Services, 
-										Google Workspace, 
-										Office 365, 
-										Technical Support
-							</dd>
-					</dl>
-				</section>
-				<section id="awards">
-					<header>
-						<h2>Certifications<!-- &amp; Accolades --></h2>
-					</header>
-			
-					<ul>
-								<li>
-									CompTIA Security+ (2022 – 2025) (<time datetime="2022-06-01">2022</time>)
-								</li>
-					</ul>
-				</section>
-				<section id="work">
-					<header><h2>Professional Experience</h2></header>
-			
-						<section id="recent">
-								<section class="organization">
-									<header>
-										<h3><a href="https://cybersecurity.bureauveritas.com">Bureau Veritas Cybersecurity North America</a>, <span class="location">Denver, CO</span></h3>
-										<div class="period">
-												<time datetime="2022">2022</time> &ndash; Present
-										</div>
-									</header>
-			
-										<section class="position">
-											<header>
-												<h4>
-													Security Engineer II
-														<span class="period">(<time datetime="2024">2024</time> &ndash; Present)</span>
-												</h4>
-											</header>
-			
-											<ul>
-												<li>Coordinated scoping calls and process improvements as a technical project manager for a major global client.</li><li>Developed and lead multi-day security trainings for client software development teams.</li><li>Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.</li><li>Developed in-house and open source tools to aid penetration test automation and effectiveness.</li>
-			
-													<li>
-														Notable achievements in the position include:
-			
-														<ul>
-																<li>Developed a standardized testing environment using Nix flakes.</li>
-																<li>Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access.</li>
-														</ul>
-													</li>
-											</ul>
-										</section>
-										<section class="position">
-											<header>
-												<h4>
-													Security Engineer I
-														<span class="period">(<time datetime="2022">2022</time> &ndash; <time datetime="2024">2024</time>)</span>
-												</h4>
-											</header>
-			
-											<ul>
-												<li>Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.</li><li>Created threat models that resulted in more secure application design.</li><li>Analyzed and presented results of testing to team members, managers, and customers.</li>
-			
-											</ul>
-										</section>
-								</section>
-								<section class="organization">
-									<header>
-										<h3><a href="https://publicinterestnetwork.org">The Public Interest Network</a>, <span class="location">Denver, CO</span></h3>
-										<div class="period">
-												<time datetime="2009">2009</time> &ndash; <time datetime="2022">2022</time>
-										</div>
-									</header>
-			
-										<section class="position">
-											<header>
-												<h4>
-													Director of IT
-														<span class="period">(<time datetime="2016">2016</time> &ndash; <time datetime="2022">2022</time>)</span>
-												</h4>
-											</header>
-			
-											<ul>
-												<li>Founded and oversaw the organization's IT & Security team, crafting organization-wide security policies in collaboration with the Legal team and the President's Office.</li><li>Wrote and maintained IT and security-related documentation and trainings.</li><li>Held bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.</li><li>Served as the technical point-of-contact for IT-related PCI DSS issues.</li><li>Investigated and remediated potential IT security incidents.</li>
-			
-													<li>
-														Notable achievements in the position include:
-			
-														<ul>
-																<li>Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT &amp; Security team.</li>
-																<li>Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.</li>
-																<li>Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.</li>
-														</ul>
-													</li>
-											</ul>
-										</section>
-										<section class="position">
-											<header>
-												<h4>
-													Manager of Online Outreach Technology
-														<span class="period">(<time datetime="2009">2009</time> &ndash; <time datetime="2016">2016</time>)</span>
-												</h4>
-											</header>
-			
-											<ul>
-												<li>Provided data analysis, database development, and IT vendor management for the organization's digital organizing program.</li><li>Managed multiple Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.</li><li>Maintained a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.</li><li>Provided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.</li>
-			
-													<li>
-														Notable achievements in the position include:
-			
-														<ul>
-																<li>Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to a vendor CRM (Convio, and later Salsa).</li>
-																<li>Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions.</li>
-														</ul>
-													</li>
-											</ul>
-										</section>
-								</section>
-						</section>
-			
-				</section>
-				<section id="education">
-					<header>
-						<h2>Education</h2>
-					</header>
-			
-					<ul>
-								<li>
-										<span class="studies">Master&#x27;s of Science, Applied Mathematics</span> &mdash;
-									<a href="https://ucdenver.edu">University of Colorado, Denver, CO</a>
-								</li>
-								<li>
-										<span class="studies">Bachelor&#x27;s of Science, Theoretical Physics</span> &mdash;
-									<a href="https://ucdenver.edu">University of Colorado, Denver, CO</a>
-								</li>
-					</ul>
-				</section>
-				<section id="volunteer">
-					<header>
-						<h2>Community Involvement</h2>
-					</header>
-			
-					<ul>
-								<li>
-									Yakshaver &mdash; 
-									<a href="https://www.yakcollective.org">Yak Collective</a>
-										<span class="period">(<time datetime="2020">2020</time> &ndash; Present)</span>
-								</li>
-					</ul>
-				</section>
-		</article>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="YAMLResume (https://yamlresume.dev)">
+
+
+  <title>Nathan Acks Resume</title>
+  <style>
+    :root {
+      --text-font-size: 16px;
+      --text-font-family: var(--text-default-font-family);
+      --line-height: 1.5;
+    }
+
+    /* Modified from: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+    /* 1. Use a more-intuitive box-sizing model */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* 2. Remove default margin */
+    *:not(dialog) {
+      margin: 0;
+    }
+
+    body {
+      /* 3. Improve text rendering */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      --border-color: #d0d0d0;
+
+      /* text colors */
+      --text-color-primary: #000000;
+      --text-color-secondary: #333333;
+
+      /* spacing */
+      --spacing-xss: 2px;
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 12px;
+      --spacing-lg: 16px;
+      --spacing-xl: 24px;
+      --spacing-xxl: 40px;
+      --spacing-xxxl: 80px;
+
+      /* font sizes */
+      --font-size-xs: 0.8rem;
+      --font-size-sm: 0.9rem;
+      --font-size-md: 1rem;
+      --font-size-lg: 1.1rem;
+      --font-size-xl: 1.25rem;
+      --font-size-xxl: 2.5rem;
+
+      /* layout */
+      --page-max-width: 900px;
+
+      /* typography */
+      --text-default-font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, sans-serif;
+    }
+
+    html {
+      font-size: var(--text-font-size);
+    }
+
+    body {
+      /* font & text */
+      color: var(--text-color-primary);
+      font-family: var(--text-font-family);
+      /* this variable is defined by `typography.fontSize` in resume html layout */
+      text-autospace: normal;
+
+      /* layout */
+      line-height: var(--line-height);
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: var(--spacing-xxxl) var(--spacing-xxl) var(--spacing-xxl);
+    }
+
+    /* header */
+    .resume-header {
+      margin-bottom: var(--spacing-xxl);
+      text-align: center;
+    }
+
+    .resume-name {
+      font-size: var(--font-size-xxl);
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .resume-headline {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    /* contact info */
+    .resume-contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: var(--spacing-lg);
+      row-gap: var(--spacing-xs);
+      margin-top: var(--spacing-sm);
+    }
+
+    .resume-contact-icon,
+    .resume-contact-label {
+      margin-right: var(--spacing-sm);
+      vertical-align: middle;
+    }
+
+    /* links: modern typographic style */
+    a {
+      color: var(--accent-color, var(--text-color-primary));
+      text-decoration: underline;
+      text-decoration-color: var(--border-color);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-skip-ink: auto;
+      transition: text-decoration-color 0.2s;
+    }
+
+    a:hover {
+      text-decoration-color: var(--accent-color, var(--text-color-primary));
+    }
+
+    /* sections */
+    .resume-section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .resume-section-title {
+      font-size: var(--font-size-xl);
+      font-weight: 500;
+      color: var(--accent-color, var(--text-color-primary));
+      margin-bottom: var(--spacing-md);
+      border-bottom: 1px solid var(--accent-color, var(--border-color));
+      padding-bottom: var(--spacing-xs);
+    }
+
+    /* entries */
+    .resume-entry {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .resume-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .resume-entry-title {
+      font-weight: 500;
+      margin-bottom: var(--spacing-xss);
+    }
+
+    .resume-entry-summary p,
+    .resume-summary-content p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* lists */
+    .resume-entry-summary ul,
+    .resume-entry-summary ol,
+    .resume-summary-content ul,
+    .resume-summary-content ol {
+      padding-left: var(--spacing-lg);
+      list-style-type: circle;
+    }
+
+    /* labeled lists (courses, keywords, etc.) */
+    .resume-labeled-list span {
+      font-weight: 500;
+    }
+
+    /* skills grid */
+    .resume-skill-item,
+    .resume-language-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .resume-skill-name,
+    .resume-language-name {
+      font-weight: 500;
+    }
+
+    .resume-skill-level,
+    .resume-language-fluency {
+      font-weight: 400;
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+      body {
+        padding: var(--spacing-xl);
+      }
+
+      .resume-header {
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .resume-contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .resume-entry-header {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* footer */
+    .resume-footer {
+      margin-top: var(--spacing-xxl);
+      padding-top: var(--spacing-xl);
+      border-top: 1px solid var(--border-color);
+      font-size: var(--font-size-sm);
+      color: var(--text-color-secondary);
+    }
+
+    @media print {
+      .resume-footer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="resume-header">
+    <h1 class="resume-name">Nathan Acks</h1>
+    <p class="resume-headline">Attendere ad singula</p>
+    <div class="resume-contact-info">
+      <span class="resume-contact-item"><span class="resume-contact-icon">📧</span><a href="mailto:nathan.acks@cardboard-iguana.com" class="resume-contact-link">nathan.acks@cardboard-iguana.com</a></span>
+      <span class="resume-contact-item"><span class="resume-contact-icon">🔗</span><a href="https://cardboard-iguana.com" class="resume-contact-link">https://cardboard-iguana.com</a></span>
+    </div>
+    <div class="resume-contact-info resume-location-info">
+      <span class="resume-contact-item"><span class="resume-contact-icon">📍</span>Denver, CO, United States</span>
+    </div>
+    <div class="resume-contact-info resume-profiles-info">
+      <span class="resume-contact-item"><span class="resume-contact-label">GitHub</span>: <a href="https://github.com/necopinus" class="resume-contact-link">@necopinus</a></span>
+    </div>
+  </header>
+  <section class="resume-section" id="summary" data-section="summary">
+    <h2 class="resume-section-title">Basics</h2>
+    <div class="resume-section-content">
+      <div class="resume-summary-content">
+        <p>Nathan Acks is a security engineer and penetration tester with broad cross-domain experience. His offensive security work spans web applications, thick clients, mobile applications, and smart contracts, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise.</p>
+        <p>Nathan has developed and led a variety of trainings, ranging from multi-day security trainings for client software development teams to one-on-one workshops on operational security for non-technical staff. Before working for Bureau Veritas Cybersecurity, Nathan founded and led the IT &amp; Security Team at a national nonprofit, crafting organization-wide security policies, trainings, and strategy documents in partnership with legal and executive leadership. This experience grounds his technical work in deep understanding of real organizational and business needs.</p>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section" id="skills" data-section="skills">
+    <h2 class="resume-section-title">Technical Proficiency</h2>
+    <div class="resume-section-content">
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Topline Skills<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Security Solutions, Organizational Leadership, Service Excellence</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Areas of Expertise<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Vulnerability Assessments, Investigations &amp; Research, Smart Contract Audits, Technical Project Management, Risk Analysis &amp; Management, Technical Documentation, Strategic Business Partnerships, Strategy &amp; Execution, Stakeholder Communication</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Penetration Testing<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Burp Suite, Kali Linux, Metasploit, Python, Solidity</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Cybersecurity<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Incident Response, PCI DSS, Security Training, Security Policy</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">IT Operations<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Linux Administration, Database Administration, Amazon Web Services, Google Workspace, Office 365, Technical Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section" id="awards" data-section="awards">
+    <h2 class="resume-section-title">Certifications</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry" id="awards-1">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Security+ (2022 – 2025)</div>
+            <div class="resume-entry-organization">CompTIA</div>
+          </div>
+          <div class="resume-entry-date">May 2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section" id="work" data-section="work">
+    <h2 class="resume-section-title">Professional Experience</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry" id="work-1">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://cybersecurity.bureauveritas.com">Bureau Veritas Cybersecurity North America</a></div>
+            <div class="resume-entry-organization">Security Engineer II</div>
+          </div>
+          <div class="resume-entry-date">Feb 2024–Present</div>
+        </div>
+        <div class="resume-entry-summary">
+          <ul>
+            <li>
+              <p>Coordinated scoping calls and process improvements as a technical project manager for a major global client.</p>
+            </li>
+            <li>
+              <p>Developed and lead multi-day security trainings for client software development teams.</p>
+            </li>
+            <li>
+              <p>Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.</p>
+            </li>
+            <li>
+              <p>Developed in-house and open source tools to aid penetration test automation and effectiveness.</p>
+            </li>
+            <li>
+              <p>Notable achievements in the position include:</p>
+              <ul>
+                <li>
+                  <p>Developed a standardized testing environment using Nix flakes.</p>
+                </li>
+                <li>
+                  <p>Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-entry" id="work-2">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://cybersecurity.bureauveritas.com">Bureau Veritas Cybersecurity North America</a></div>
+            <div class="resume-entry-organization">Security Engineer I</div>
+          </div>
+          <div class="resume-entry-date">May 2022–Feb 2024</div>
+        </div>
+        <div class="resume-entry-summary">
+          <ul>
+            <li>
+              <p>Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.</p>
+            </li>
+            <li>
+              <p>Created threat models that resulted in more secure application design.</p>
+            </li>
+            <li>
+              <p>Analyzed and presented results of testing to team members, managers, and customers.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-entry" id="work-3">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://publicinterestnetwork.org">The Public Interest Network</a></div>
+            <div class="resume-entry-organization">Director of IT</div>
+          </div>
+          <div class="resume-entry-date">Jun 2016–May 2022</div>
+        </div>
+        <div class="resume-entry-summary">
+          <ul>
+            <li>
+              <p>Founded and oversaw the organization&#39;s IT &amp; Security team, crafting organization-wide security policies in collaboration with the Legal team and the President&#39;s Office.</p>
+            </li>
+            <li>
+              <p>Wrote and maintained IT and security-related documentation and trainings.</p>
+            </li>
+            <li>
+              <p>Held bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.</p>
+            </li>
+            <li>
+              <p>Served as the technical point-of-contact for IT-related PCI DSS issues.</p>
+            </li>
+            <li>
+              <p>Investigated and remediated potential IT security incidents.</p>
+            </li>
+            <li>
+              <p>Notable achievements in the position include:</p>
+              <ul>
+                <li>
+                  <p>Created an internal system for the provisioning and management of the full lifecycle for accounts in services managed by the IT &amp; Security team.</p>
+                </li>
+                <li>
+                  <p>Oversaw the successful migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.</p>
+                </li>
+                <li>
+                  <p>Managed the successful roll-out of two-factor authentication to the staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems nationwide.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-entry" id="work-4">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://publicinterestnetwork.org">The Public Interest Network</a></div>
+            <div class="resume-entry-organization">Manager of Online Outreach Technology</div>
+          </div>
+          <div class="resume-entry-date">Oct 2009–Jun 2016</div>
+        </div>
+        <div class="resume-entry-summary">
+          <ul>
+            <li>
+              <p>Provided data analysis, database development, and IT vendor management for the organization&#39;s digital organizing program.</p>
+            </li>
+            <li>
+              <p>Managed multiple Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.</p>
+            </li>
+            <li>
+              <p>Maintained a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.</p>
+            </li>
+            <li>
+              <p>Provided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.</p>
+            </li>
+            <li>
+              <p>Notable achievements in the position include:</p>
+              <ul>
+                <li>
+                  <p>Oversaw the successful migrations of an in-house constituent relationship management (CRM) and action system to a vendor CRM (Convio, and later Salsa).</p>
+                </li>
+                <li>
+                  <p>Led a successful project that integrated vendor CRM databases with a separate system hosted by ROI Solutions.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section" id="education" data-section="education">
+    <h2 class="resume-section-title">Education</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry" id="education-1">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://ucdenver.edu">University of Colorado, Denver, CO</a></div>
+            <div class="resume-entry-organization">Master, Applied Mathematics</div>
+          </div>
+          <div class="resume-entry-date">Apr 2005–May 2009</div>
+        </div>
+      </div>
+      <div class="resume-entry" id="education-2">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://ucdenver.edu">University of Colorado, Denver, CO</a></div>
+            <div class="resume-entry-organization">Bachelor, Theoretical Physics</div>
+          </div>
+          <div class="resume-entry-date">Jul 1999–Dec 2003</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section" id="volunteer" data-section="volunteer">
+    <h2 class="resume-section-title">Community Involvement</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry" id="volunteer-1">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://www.yakcollective.org">Yak Collective</a></div>
+            <div class="resume-entry-organization">Yakshaver</div>
+          </div>
+          <div class="resume-entry-date">Apr 2020–Present</div>
+        </div>
+        <div class="resume-entry-summary">
+          <ul>
+            <li>
+              <p>Maintained a static website for the organization using GitHub, Netlify, Cloudinary, and IFTTT.</p>
+            </li>
+            <li>
+              <p>Helped design and implement externally-facing project pages.</p>
+            </li>
+            <li>
+              <p>Helped set up and maintain a member database using Knack.</p>
+            </li>
+            <li>
+              <p>Part of the core team responsible for managing the organizational treasury using Colony and Gnosis Safe.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="resume-footer">Generated by <a href="https://yamlresume.dev">YAMLResume</a></footer>
+</body>
+
 </html>

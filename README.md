@@ -1,86 +1,58 @@
 # My resume
 
-To build:
+`resume.yaml` is the full record, in [YAMLResume](https://yamlresume.dev/)
+format. `resume.pdf` and `resume.html` are the trimmed ~2-page versions
+generated from it.
 
-1. Install necessary packages (and refresh lock file).
+## Requirements
 
-   ```bash
-   rm pnpm-lock.yaml
-   pnpm install
-   ```
+- [yamlresume](https://yamlresume.dev/docs) and its PDF toolchain (run
+  `yamlresume doctor` to check)
+- [uv](https://docs.astral.sh/uv/) (provides PyYAML for `filter.py`; cached
+  after the first run)
 
-2. Generate full and highlight resume versions.
+## Building
 
-   ```bash
-   ./node_modules/.bin/resumed render --theme jsonresume-theme-local
-   ```
-
-3. Open the HTML files up in Chrome and print from there. Adjust the margins to match the HTML text width and provide sane page breaks (0.7" top/bottom and 0.5" left/right seems to work well).
-
-## Unused sections
-
-Currently unused sections (example data taken from the [JSON Resume sample file](https://github.com/jsonresume/resume-schema/blob/master/sample.resume.json)):
-
-```json
-{
-  "basics": {
-    "phone": "(123) 456-7890"
-  },
-  "publications": [
-    {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Miss Direction",
-      "description": "A mapping engine that misguides you",
-      "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
-      ],
-      "keywords": [
-        "GoogleMaps", "Chrome Extension", "Javascript"
-      ],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "url": "missdirection.example.com",
-      "roles": [
-        "Team lead", "Designer"
-      ],
-      "entity": "Smoogle",
-      "type": "application"
-    }
-  ]
-}
+```bash
+./build.sh
 ```
+
+This trims `resume.yaml` down to size with `filter.py`, then runs a single
+`yamlresume build`, which produces both outputs:
+
+- `resume.pdf` — LaTeX engine, ModernCV Classic template
+- `resume.html` — HTML engine, Calm template
+
+## Trimming rules
+
+`filter.py` implements the same two-tier cutoffs as the old Handlebars theme,
+relative to the current year (override with the `RECENT_YEARS` and
+`PREVIOUS_YEARS` environment variables):
+
+- **work** — positions that ended within the last 10 years (or are ongoing)
+  are kept in full; positions that ended 10–15 years ago are collapsed into a
+  single synthetic "Previous Employment" entry; anything older is dropped.
+- **volunteer** — kept if ongoing or ended within the last 15 years, minus a
+  small exclusion list (`EXCLUDED_VOLUNTEER_ORGS` in `filter.py`).
+- **education** — post-secondary degrees are always kept; anything else only
+  if it ended within the last 15 years.
+- **awards** — kept if dated within the last 15 years.
+
+To build the full, untrimmed resume instead:
+
+```bash
+yamlresume build resume.yaml
+```
+
+## Known validation warnings
+
+`yamlresume validate resume.yaml` currently reports a handful of accepted
+warnings: the basics summary and one work summary exceed the schema's
+1024-character limit, and the pre-college / non-degree education entries lack
+the required `degree` (no suitable enum value exists) and `area` fields. The
+build succeeds regardless.
 
 ## References
 
-- [JSON Resume Schema](https://github.com/jsonresume/resume-schema)
+- [YAMLResume documentation](https://yamlresume.dev/docs)
+- [YAMLResume schema](https://yamlresume.dev/schema.json)
