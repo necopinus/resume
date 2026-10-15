@@ -6,6 +6,12 @@
 # LaTeX intermediates, in case yamlresume is ever run in-place instead of
 # via build.sh
 *.aux
+*.err
 *.log
 *.out
 *.tex
+
+# Agentic grafitti
+#
+.mcplogic-sessions/
+.ruff_cache/

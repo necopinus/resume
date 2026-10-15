@@ -25,18 +25,21 @@ This trims `resume.yaml` down to size with `filter.py`, then runs a single
 
 ## Trimming rules
 
-`filter.py` implements the same two-tier cutoffs as the old Handlebars theme,
-relative to the current year (override with the `RECENT_YEARS` and
-`PREVIOUS_YEARS` environment variables):
+`filter.py` trims with a single end-date cutoff (`CUTOFF` in `filter.py`;
+override with the `CUTOFF` environment variable, `YYYY-MM-DD`):
 
-- **work** — positions that ended within the last 10 years (or are ongoing)
-  are kept in full; positions that ended 10–15 years ago are collapsed into a
-  single synthetic "Previous Employment" entry; anything older is dropped.
-- **volunteer** — kept if ongoing or ended within the last 15 years, minus a
-  small exclusion list (`EXCLUDED_VOLUNTEER_ORGS` in `filter.py`).
-- **education** — post-secondary degrees are always kept; anything else only
-  if it ended within the last 15 years.
-- **awards** — kept if dated within the last 15 years.
+- **work** — positions that ended on or after the cutoff (or are ongoing)
+  are kept in full; anything older is dropped.
+- **volunteer** — same end-date rule as work.
+- **education** — college degrees only (see `COLLEGE_DEGREES` in
+  `filter.py`).
+- **awards** — kept if dated on or after the cutoff.
+
+The default cutoff (2014-01-01) keeps the core positions — The Public
+Interest Network and Bureau Veritas — and was checked on 2026-10-14 to fit
+two PDF pages. If you add content, run `./build.sh`, check the page count
+with `pdfinfo resume.pdf`, and move the cutoff forward until the PDF is back
+to two pages.
 
 To build the full, untrimmed resume instead:
 
@@ -44,13 +47,9 @@ To build the full, untrimmed resume instead:
 yamlresume build resume.yaml
 ```
 
-## Known validation warnings
+## Validation
 
-`yamlresume validate resume.yaml` currently reports a handful of accepted
-warnings: the basics summary and one work summary exceed the schema's
-1024-character limit, and the pre-college / non-degree education entries lack
-the required `degree` (no suitable enum value exists) and `area` fields. The
-build succeeds regardless.
+`yamlresume validate resume.yaml` passes cleanly as of 2026-10-14.
 
 ## References
 

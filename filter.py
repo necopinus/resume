@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
 """Trim the full resume.yaml down to a two-page public resume on stdout.
 
-Rules (mirroring the old Handlebars theme, theme/index.js):
+Cookie-cutter rules (one date cutoff, no per-entry special cases):
 
-- work:      positions that ended within RECENT_YEARS (or are ongoing) are
-             kept in full; positions that ended within PREVIOUS_YEARS are
-             collapsed into a single synthetic "Previous Employment" entry;
-             anything older is dropped.
-- volunteer: kept if ongoing or ended within PREVIOUS_YEARS, minus
-             EXCLUDED_VOLUNTEER_ORGS.
-- education: post-secondary degrees are always kept; anything else only if
-             it ended within PREVIOUS_YEARS.
-- awards:    kept if dated within PREVIOUS_YEARS (undated awards are kept).
+- work:      positions that ended on or after CUTOFF (or are ongoing) are
+             kept in full; anything older is dropped.
+- volunteer: same end-date rule as work.
+- education: college degrees only (see COLLEGE_DEGREES).
+- awards:    kept if dated on or after CUTOFF.
 
-Cutoffs are relative to the current year; override with the RECENT_YEARS and
-PREVIOUS_YEARS environment variables.
+CUTOFF defaults to 2014-01-01, calibrated 2026-10-14: it keeps the core
+positions (The Public Interest Network and Bureau Veritas) and fits two PDF
+pages. Override with the CUTOFF environment variable (YYYY-MM-DD).
 
 Usage: python3 filter.py resume.yaml > trimmed.yml
        (or let build.sh do it — PyYAML provided by `uv run --with pyyaml`)
@@ -27,11 +24,13 @@ from datetime import date
 
 import yaml
 
-RECENT_YEARS = int(os.environ.get("RECENT_YEARS", "10"))
-PREVIOUS_YEARS = int(os.environ.get("PREVIOUS_YEARS", "15"))
+# Earliest end date kept in the trimmed resume. Calibrated 2026-10-14 as the
+# oldest window that keeps the core positions (The Public Interest Network,
+# 2009-10 to 2022-05; Bureau Veritas, 2022-05 to present) while fitting two
+# PDF pages.
+CUTOFF = date.fromisoformat(os.environ.get("CUTOFF", "2014-01-01"))
 
-EXCLUDED_VOLUNTEER_ORGS = {"Colorado Indymedia"}
-POSTSECONDARY_DEGREES = {"Diploma", "Associate", "Bachelor", "Master", "Doctor"}
+COLLEGE_DEGREES = {"Diploma", "Associate", "Bachelor", "Master", "Doctor"}
 
 SECTIONS = {
     "order": ["basics", "skills", "awards", "work", "education", "volunteer"],
@@ -48,88 +47,40 @@ LAYOUTS = [
     {"engine": "html", "template": "calm", "sections": SECTIONS},
 ]
 
-CURRENT_YEAR = date.today().year
-RECENT_CUTOFF = CURRENT_YEAR - RECENT_YEARS
-PREVIOUS_CUTOFF = CURRENT_YEAR - PREVIOUS_YEARS
+CUTOFF_KEY = (CUTOFF.year, CUTOFF.month, CUTOFF.day)
 
 
-def year(value):
-    """Extract a year from a date string, tolerating junk like '2009-09-31'."""
+def date_key(value):
+    """(year, month, day) tuple for a date-like value; None if missing or junk.
+
+    Takes the first YYYY[-MM[-DD]] in the value, so year-only dates work and
+    impossible dates like '2009-09-31' cannot raise. Tuple comparison is
+    enough for cutoff checks; we never need a real date object here.
+    """
     if not value:
         return None
-    match = re.search(r"\d{4}", str(value))
-    return int(match.group(0)) if match else None
+    match = re.search(r"(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?", str(value))
+    if not match:
+        return None
+    return (int(match[1]), int(match[2] or 1), int(match[3] or 1))
 
 
-def end_year(entry):
-    """Year an entry ended; None means ongoing (i.e. current)."""
-    return year(entry.get("endDate"))
+def ended_since_cutoff(entry, field):
+    """True when entry[field] is absent/ongoing or falls on or after CUTOFF."""
+    key = date_key(entry.get(field))
+    return key is None or key >= CUTOFF_KEY
 
 
-def trim_work(entries):
-    recent, previous = [], []
-    for entry in entries:
-        ended = end_year(entry)
-        if ended is None or ended >= RECENT_CUTOFF:
-            recent.append(entry)
-        elif ended >= PREVIOUS_CUTOFF:
-            previous.append(entry)
-
-    if previous:
-        # Slash-join positions held at the same organization, then join the
-        # per-organization clauses into a single summary line.
-        clauses = []
-        index = 0
-        while index < len(previous):
-            org = previous[index].get("name", "")
-            positions = [previous[index].get("position", "")]
-            index += 1
-            while index < len(previous) and previous[index].get("name") == org:
-                positions.append(previous[index].get("position", ""))
-                index += 1
-            clauses.append("/".join(positions) + (f" — {org}" if org else ""))
-
-        start_years = [y for e in previous if (y := year(e.get("startDate")))]
-        end_years = [y for e in previous if (y := end_year(e))]
-        recent.append(
-            {
-                "name": "Various organizations",
-                "position": "Previous Employment",
-                "startDate": str(min(start_years)),
-                "endDate": str(max(end_years)),
-                "summary": ", ".join(clauses) + ".",
-            }
-        )
-
-    return recent
-
-
-def trim_volunteer(entries):
-    kept = []
-    for entry in entries:
-        if entry.get("organization") in EXCLUDED_VOLUNTEER_ORGS:
-            continue
-        ended = end_year(entry)
-        if ended is None or ended >= PREVIOUS_CUTOFF:
-            kept.append(entry)
-    return kept
+def trim_by_end_date(entries):
+    return [entry for entry in entries if ended_since_cutoff(entry, "endDate")]
 
 
 def trim_education(entries):
-    return [
-        entry
-        for entry in entries
-        if entry.get("degree") in POSTSECONDARY_DEGREES
-        or (end_year(entry) or 0) >= PREVIOUS_CUTOFF
-    ]
+    return [entry for entry in entries if entry.get("degree") in COLLEGE_DEGREES]
 
 
 def trim_awards(entries):
-    return [
-        entry
-        for entry in entries
-        if (year(entry.get("date")) or CURRENT_YEAR) >= PREVIOUS_CUTOFF
-    ]
+    return [entry for entry in entries if ended_since_cutoff(entry, "date")]
 
 
 def block_strings(dumper, data):
@@ -143,8 +94,8 @@ def main():
 
     content = document["content"]
     for section, trim in (
-        ("work", trim_work),
-        ("volunteer", trim_volunteer),
+        ("work", trim_by_end_date),
+        ("volunteer", trim_by_end_date),
         ("education", trim_education),
         ("awards", trim_awards),
     ):
