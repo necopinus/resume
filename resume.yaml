@@ -352,10 +352,10 @@ content:
     url: https://www.yakcollective.org
     startDate: 2020-05-01
     summary: |
-      - Maintained a static website for the organization using GitHub, Netlify, Cloudinary, and IFTTT.
+      - Maintained a static website for the organization using Quartz, GitHub Actions, and Netlify.
+      - Wrote and maintained organization-specific Discord bots hosted using exe.dev.
       - Helped design and implement externally-facing project pages.
-      - Helped set up and maintain a member database using Knack.
-      - Part of the core team responsible for managing the organizational treasury using Colony and Gnosis Safe.
+      - Part of the core team responsible for managing the organizational treasury using Gnosis Safe.
   - organization: Colorado Indymedia
     position: Webmaster & Reporter
     startDate: 2009-05-01
@@ -394,19 +394,19 @@ locale:
 layouts:
 - engine: latex
   template: moderncv-classic
-  sections: &id001
-    order:
-    - basics
-    - skills
-    - awards
-    - work
-    - education
-    - volunteer
-    aliases:
-      work: Professional Experience
-      volunteer: Community Involvement
-      awards: Certifications
-      skills: Technical Proficiency
+# sections: &id001
+#   order:
+#   - basics
+#   - skills
+#   - awards
+#   - work
+#   - education
+#   - volunteer
+#   aliases:
+#     work: Professional Experience
+#     volunteer: Community Involvement
+#     awards: Certifications
+#     skills: Technical Proficiency
 - engine: html
   template: calm
-  sections: *id001
+# sections: *id001
