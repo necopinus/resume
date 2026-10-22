@@ -22,24 +22,6 @@ content:
     username: necopinus
     url: https://github.com/necopinus
   skills:
-  - name: Topline Skills
-    level: Intermediate
-    keywords:
-    - Security Solutions
-    - Organizational Leadership
-    - Service Excellence
-  - name: Areas of Expertise
-    level: Intermediate
-    keywords:
-    - Vulnerability Assessments
-    - Investigations & Research
-    - Smart Contract Audits
-    - Technical Project Management
-    - Risk Analysis & Management
-    - Technical Documentation
-    - Strategic Business Partnerships
-    - Strategy & Execution
-    - Stakeholder Communication
   - name: Penetration Testing
     level: Intermediate
     keywords:
@@ -48,22 +30,51 @@ content:
     - Metasploit
     - Python
     - Solidity
+  - name: Vulnerability Assessments
+    level: Intermediate
+    keywords:
+    - Smart Contract Audits
+    - Investigations & Research
   - name: Cybersecurity
     level: Intermediate
     keywords:
     - Incident Response
-    - PCI DSS
     - Security Training
+    - Technical Documentation
+  - name: Compliance
+    level: Intermediate
+    keywords:
+    - PCI DSS
+    - Risk Analysis & Management
     - Security Policy
   - name: IT Operations
     level: Intermediate
     keywords:
     - Linux Administration
     - Database Administration
+    - Technical Support
+  - name: Cloud & SaaS
+    level: Intermediate
+    keywords:
     - Amazon Web Services
     - Google Workspace
     - Office 365
-    - Technical Support
+  - name: Leadership & Strategy
+    level: Intermediate
+    keywords:
+    - Organizational Leadership
+    - Strategy & Execution
+  - name: Projects
+    level: Intermediate
+    keywords:
+    - Technical Project Management
+    - Stakeholder Communication
+  - name: Strengths
+    level: Intermediate
+    keywords:
+    - Security Solutions
+    - Service Excellence
+    - Strategic Business Partnerships
   awards:
   - title: Security+ (2022 – 2025)
     awarder: CompTIA
