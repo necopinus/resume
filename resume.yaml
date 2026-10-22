@@ -35,6 +35,7 @@ content:
     keywords:
     - Smart Contract Audits
     - Investigations & Research
+    - Security Solutions
   - name: Cybersecurity
     level: Intermediate
     keywords:
@@ -64,17 +65,13 @@ content:
     keywords:
     - Organizational Leadership
     - Strategy & Execution
+    - Strategic Business Partnerships
   - name: Projects
     level: Intermediate
     keywords:
     - Technical Project Management
     - Stakeholder Communication
-  - name: Strengths
-    level: Intermediate
-    keywords:
-    - Security Solutions
     - Service Excellence
-    - Strategic Business Partnerships
   awards:
   - title: Security+ (2022 – 2025)
     awarder: CompTIA
