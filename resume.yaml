@@ -22,7 +22,7 @@ content:
     username: necopinus
     url: https://github.com/necopinus
   skills:
-  - name: Penetration Tests
+  - name: Pen Testing
     level: Intermediate
     keywords:
     - Burp Suite
