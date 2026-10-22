@@ -22,7 +22,7 @@ content:
     username: necopinus
     url: https://github.com/necopinus
   skills:
-  - name: Penetration Testing
+  - name: Pen Testing
     level: Intermediate
     keywords:
     - Burp Suite
@@ -59,12 +59,12 @@ content:
     - Amazon Web Services
     - Google Workspace
     - Office 365
-  - name: Leadership & Strategy
+  - name: Leadership
     level: Intermediate
     keywords:
     - Organizational Leadership
     - Strategy & Execution
-  - name: Projects
+  - name: Project Management
     level: Intermediate
     keywords:
     - Technical Project Management
