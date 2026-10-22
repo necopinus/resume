@@ -13,6 +13,12 @@ CUTOFF defaults to 2014-01-01, calibrated 2026-10-14: it keeps the core
 positions (The Public Interest Network and Bureau Veritas) and fits two PDF
 pages. Override with the CUTOFF environment variable (YYYY-MM-DD).
 
+Layouts (engines, templates, section order and aliases) are not defined
+here. They live in the `layouts` key of resume.yaml and pass through
+untouched; sections dropped by the rules above are simply skipped at render
+time. If resume.yaml has no `layouts` key, the output omits it too and
+yamlresume falls back to its own built-in default layouts.
+
 Usage: python3 filter.py resume.yaml > trimmed.yml
        (or let build.sh do it — PyYAML provided by `uv run --with pyyaml`)
 """
@@ -31,21 +37,6 @@ import yaml
 CUTOFF = date.fromisoformat(os.environ.get("CUTOFF", "2014-01-01"))
 
 COLLEGE_DEGREES = {"Diploma", "Associate", "Bachelor", "Master", "Doctor"}
-
-SECTIONS = {
-    "order": ["basics", "skills", "awards", "work", "education", "volunteer"],
-    "aliases": {
-        "work": "Professional Experience",
-        "volunteer": "Community Involvement",
-        "awards": "Certifications",
-        "skills": "Technical Proficiency",
-    },
-}
-
-LAYOUTS = [
-    {"engine": "latex", "template": "moderncv-classic", "sections": SECTIONS},
-    {"engine": "html", "template": "calm", "sections": SECTIONS},
-]
 
 CUTOFF_KEY = (CUTOFF.year, CUTOFF.month, CUTOFF.day)
 
@@ -105,8 +96,6 @@ def main():
                 content[section] = trimmed
             else:
                 del content[section]
-
-    document["layouts"] = LAYOUTS
 
     yaml.add_representer(str, block_strings, Dumper=yaml.SafeDumper)
     yaml.safe_dump(

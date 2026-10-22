@@ -23,6 +23,10 @@ This trims `resume.yaml` down to size with `filter.py`, then runs a single
 - `resume.pdf` — LaTeX engine, ModernCV Classic template
 - `resume.html` — HTML engine, Calm template
 
+Engine, template, section order and section titles all come from the
+`layouts` key in `resume.yaml`, so that is the place to tweak them. If that
+key is ever missing, yamlresume falls back to its own default layouts.
+
 ## Trimming rules
 
 `filter.py` trims with a single end-date cutoff (`CUTOFF` in `filter.py`;

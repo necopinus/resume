@@ -3,7 +3,8 @@
 #
 # resume.yaml is the full record. filter.py trims it down to recent history
 # (see the docstring there for the rules), then a single `yamlresume build`
-# produces both outputs:
+# produces both outputs. Engines, templates and section order come from the
+# `layouts` key of resume.yaml; filter.py passes it through untouched.
 #
 #   resume.pdf   LaTeX engine, ModernCV Classic template
 #   resume.html  HTML engine, Calm template
@@ -17,7 +18,7 @@ cd "$(dirname "$0")"
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
-uv run --with pyyaml python3 filter.py resume.yaml > "$tmp/resume.yml"
+uv run --with pyyaml python3 filter.py resume.yaml >"$tmp/resume.yml"
 
 # Build inside the temp dir so LaTeX intermediate files (.aux/.log/...) never
 # touch the repo.
