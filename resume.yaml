@@ -81,7 +81,7 @@ content:
     awarder: CompTIA
     date: 2022-06-01
   work:
-  - name: Bureau Veritas Cybersecurity North America
+  - name: Bureau Veritas Cybersecurity NAM
     position: Security Engineer II
     url: https://cybersecurity.bureauveritas.com
     startDate: 2024-02-05
@@ -96,7 +96,7 @@ content:
       - Notable achievements include:
         - Developed a standardized testing environment using Nix flakes.
         - Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access.
-  - name: Bureau Veritas Cybersecurity North America
+  - name: Bureau Veritas Cybersecurity NAM
     position: Security Engineer I
     url: https://cybersecurity.bureauveritas.com
     startDate: 2022-05-09
