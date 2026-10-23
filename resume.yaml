@@ -10,9 +10,7 @@ content:
     email: nathan.acks@cardboard-iguana.com
     url: https://cardboard-iguana.com
     summary: |
-      Nathan Acks is a security engineer and penetration tester with broad cross-domain experience. His offensive security work spans web applications, thick clients, mobile applications, and smart contracts, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise.
-
-      Nathan has developed and led a variety of trainings, ranging from multi-day security trainings for client software development teams to one-on-one workshops on operational security for non-technical staff. Before working for Bureau Veritas Cybersecurity, Nathan helped found the IT & Security Team at a national nonprofit, crafting organization-wide security policies, trainings, and strategy documents in partnership with legal and executive leadership. This experience grounds his technical work in deep understanding of real organizational and business needs.
+      Nathan Acks is a security engineer and penetration tester with over a decade of experience in IT security. His offensive security work spans web applications, thick clients, and mobile applications, blending manual and automated techniques to assess risk, build threat models, and defeat the security mechanisms of the systems he evaluates. He is a deliberate generalist, emphasizing breadth and flexibility of ability rather than single-domain expertise. Nathan develops and leads security trainings, from multi-day sessions for client software development teams to one-on-one workshops on operational security for non-technical staff. Before Bureau Veritas Cybersecurity, he helped found the IT & Security Team at The Public Interest Network, a national nonprofit, after six years of project management and data analysis in its digital organizing program.
   location:
     city: Denver
     region: CO
@@ -21,25 +19,31 @@ content:
   - network: GitHub
     username: necopinus
     url: https://github.com/necopinus
+  - network: LinkedIn
+    username: necopinus
+    url: https://www.linkedin.com/in/necopinus/
   skills:
   - name: Pen Testing
-    level: Intermediate
+    level: Advanced
     keywords:
     - Burp Suite
+    - Impacket
     - Kali Linux
     - Metasploit
+    - Nmap
     - Python
-    - Solidity
+    - Wireshark
   - name: Vulnerability Assessments
-    level: Intermediate
+    level: Advanced
     keywords:
-    - Smart Contract Audits
     - Investigations & Research
-    - Security Solutions
+    - Source Code Review
+    - Threat Modeling
   - name: Cybersecurity
-    level: Intermediate
+    level: Advanced
     keywords:
     - Incident Response
+    - Security Solutions
     - Security Training
     - Technical Documentation
   - name: Compliance
@@ -49,7 +53,7 @@ content:
     - Risk Analysis & Management
     - Security Policy
   - name: IT Operations
-    level: Intermediate
+    level: Advanced
     keywords:
     - Linux Administration
     - Database Administration
@@ -61,19 +65,19 @@ content:
     - Google Workspace
     - Microsoft 365
   - name: Leadership
-    level: Intermediate
+    level: Advanced
     keywords:
     - Organizational Leadership
     - Strategy & Execution
     - Strategic Business Partnerships
   - name: Projects
-    level: Intermediate
+    level: Advanced
     keywords:
     - Technical Project Management
     - Stakeholder Communication
     - Service Excellence
   awards:
-  - title: Security+ (2022 – 2025)
+  - title: Security+ (2022 – 2025, expired)
     awarder: CompTIA
     date: 2022-06-01
   work:
@@ -82,11 +86,14 @@ content:
     url: https://cybersecurity.bureauveritas.com
     startDate: 2024-02-05
     summary: |
-      - Coordinated scoping calls and process improvements as a technical project manager for a major global client.
-      - Developed and lead multi-day security trainings for client software development teams.
+      - Led penetration tests across web applications, mobile applications, and network infrastructure, including cloud architecture and AWS account configuration reviews.
+      - Performed source code review across large multi-repository codebases.
+      - Wrote client-facing deliverables including architecture and configuration review reports.
+      - Developed and led multi-day security trainings for client software development teams, delivered on-site in the US and Europe.
       - Led teams of 1 - 4 engineers during multi-week engagements covering multiple services and applications.
-      - Developed in-house and open source tools to aid penetration test automation and effectiveness.
-      - Notable achievements in the position include:
+      - Coordinated scoping calls and process improvements as a technical project manager for a major global client.
+      - Developed in-house tools to aid penetration test automation and effectiveness.
+      - Notable achievements include:
         - Developed a standardized testing environment using Nix flakes.
         - Maintained an offline knowledge base for use by engineers during on-site engagements without direct internet access.
   - name: Bureau Veritas Cybersecurity North America
@@ -95,8 +102,9 @@ content:
     startDate: 2022-05-09
     endDate: 2024-02-04
     summary: |
-      - Worked closely with other application security engineers to perform reviews and tests on web applications and thick clients.
+      - Performed security reviews and penetration tests of web applications, thick clients, and mobile applications as part of an application security team.
       - Created threat models that resulted in more secure application design.
+      - Wrote client-facing deliverables including penetration test reports.
       - Analyzed and presented results of testing to team members, managers, and customers.
   - name: The Public Interest Network
     position: Director of IT
@@ -104,14 +112,14 @@ content:
     startDate: 2016-06-27
     endDate: 2022-05-06
     summary: |
-      - Founded and oversaw the IT & Security team, crafting organization-wide security policies, documentation, and trainings in collaboration with the Legal team and the President's Office.
-      - Held bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by all staff, including email, user authentication, document management, and custom internal applications.
-      - Served as the technical point-of-contact for IT-related PCI DSS issues.
+      - Founded and oversaw the IT & Security team, which grew from one to two, crafting organization-wide security policies, documentation, and trainings with the Legal team and the President's Office.
+      - Held bottom-line responsibility for the roll-out, maintenance, security, and support of IT systems used by 150 - 200 staff (up to 500 in summer), including email, authentication, document management, and custom internal applications.
+      - Served as the technical point-of-contact for PCI DSS issues.
       - Investigated and remediated potential IT security incidents.
-      - Notable achievements in the position include:
-        - Oversaw the creation of an internal system for managing the full lifecycle of accounts in services managed by the IT & Security team.
-        - Oversaw the migration from a legacy vendor email system to Google Workspace, and from a legacy LDAP system to Okta.
-        - Managed the roll-out of two-factor authentication to all staff, the transition to Microsoft 365, and the migration of multiple office-based phone systems to Zoom Phone.
+      - Notable achievements include:
+        - Oversaw the creation of an internal account lifecycle system covering Okta, Google Workspace, Microsoft 365, and Zoom, including just-in-time Zoom provisioning driven by shared calendar bookings.
+        - Oversaw migrations from a legacy vendor email system to Google Workspace and from legacy LDAP to Okta.
+        - Managed the roll-out of two-factor authentication to all staff and the migration of office phones to Zoom Phone.
   - name: The Public Interest Network
     position: Manager of Online Outreach Technology
     url: https://publicinterestnetwork.org
@@ -119,14 +127,14 @@ content:
     endDate: 2016-06-26
     summary: |
       - Provided data analysis, database development, and IT vendor management for the organization's digital organizing program.
-      - Managed multiple Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.
-      - Maintained a large library of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.
-      - Provided wide-ranging support in the development of content and outreach strategies as part of a rapid response organizing team.
-      - Notable achievements in the position include:
+      - Managed up to five Linux servers running mission-critical applications including LDAP/GOsa, MySQL, NFS, Postfix, Apache, CiviCRM, WebGUI, and Tenable Security Center.
+      - Maintained a library of dozens of custom SQL and PL/SQL scripts for reporting and data import, export, and clean-up.
+      - Participated in outreach strategy development and helped write content for email campaigns and web pages, including rapid responses to breaking political stories.
+      - Notable achievements include:
         - Oversaw the migrations of an in-house constituent relationship management (CRM) and action system to a vendor CRM (Convio, and later Salsa).
         - Led a project that integrated vendor CRM databases with a separate system hosted by ROI Solutions.
   - name: U.S. Anti-Doping Agency
-    position: Chaperon
+    position: Chaperone
     url: https://www.usada.org
     startDate: 2009-07-01
     endDate: 2009-09-30
@@ -145,7 +153,7 @@ content:
     startDate: 2008-06-01
     endDate: 2009-01-31
     summary: |
-      - Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
+      - Handled customer complaints, hiring inquiries, and initial troubleshooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
       - Responsible for on-site security (including inventory and cash).
       - Managed teams of 3 - 12 book sellers.
       - Regular book seller duties such as customer queries, product stocking, and cash handling.
@@ -155,7 +163,7 @@ content:
     startDate: 2008-04-01
     endDate: 2008-05-31
     summary: |
-      - Handled customer complaints, hiring inquiries, and initial trouble-shooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
+      - Handled customer complaints, hiring inquiries, and initial troubleshooting for floor computer systems (Square One, POS, Linux terminals, VoIP telephones, printers, and other hardware).
       - Responsible for on-site security (including inventory and cash).
       - Managed teams of 3 - 12 book sellers.
       - Regular book seller duties such as customer queries, product stocking, and cash handling.
@@ -226,8 +234,8 @@ content:
     endDate: 2004-06-30
     summary: |
       - Designed, implemented, and administered the corporate website and the web presence for Cyberpunk the Collectible Card Game.
-      - Provided systems administration and technical support in a hetrogenous network environment.
-      - Installed and maintained Apache HTTP, MySQL, and a Microsoft Exchange serverd.
+      - Provided systems administration and technical support in a heterogeneous network environment.
+      - Installed and maintained Apache HTTP, MySQL, and a Microsoft Exchange server.
       - Assisted in the design and implementation of an extensible content management system written in object oriented PHP.
   - name: Comcast
     position: Sales Associate
@@ -309,7 +317,7 @@ content:
     summary: |
       - Handled customer queries, product stocking, and other aspects of gift shop sales.
   - name: Water World
-    position: Cachier
+    position: Cashier
     url: https://www.waterworldcolorado.com
     startDate: 1993-05-01
     endDate: 1993-08-31
@@ -333,7 +341,7 @@ content:
 #   area: Geophysics
 #   startDate: 1997-08-01
 #   endDate: 1999-05-31
-# - institution: Front Range Community College, Wesminster, CO
+# - institution: Front Range Community College, Westminster, CO
 #   url: https://www.frontrange.edu
 #   area: Post-secondary education
 #   startDate: 1998-05-01
@@ -344,9 +352,9 @@ content:
     area: Upper Secondary Education
     startDate: 1994-08-01
     endDate: 1997-05-31
-  - institution: Pecos Junior High School, Thornotn, CO
+  - institution: Pecos Junior High School, Thornton, CO
     degree: Middle School
-    area: Lower Secondary Sductation
+    area: Lower Secondary Education
     startDate: 1991-08-01
     endDate: 1994-05-31
 # - institution: Hillcrest Elementary School, Northglenn, CO
